@@ -1,71 +1,85 @@
 <html>
   <head>
-    <title>Bourbon</title>
+    <title>Hangouts</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" type="text/css" href="styles/vendor/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script type="text/javascript" src="//use.typekit.net/pvh8lra.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
+    <div id="content" class="snap-content">
+      <nav>
+        <div class='logo'>
+          <a>Hangouts</a>
+        </div>
+        <div class='nav-items'>
+          <ul>
+            <li><a>Sign in</a></li>
+            <li><a href="#"><img src="images/menu-open.png"></a></li>
+          </ul>
+        </div>
+      </nav>
 
-  <div id="container">
-	  <header>
-	  	<h1>Bourbon Neat</h1>
-	  </header>
+      <div id="slides">
+        <div class="slides-container">
+          <img src="images/people.jpeg" alt="Cinelli">
+          <img src="images/surly.jpeg" width="1024" height="682" alt="Surly">
+          <img src="images/cinelli-front.jpeg" width="1024" height="683" alt="Cinelli">
+          <img src="images/affinity.jpeg" width="1024" height="685" alt="Affinity">
+        </div>
 
-	  <article>
-	  	<nav>
-	  		<ul>
-	  			<li><a href="#">Link 1</a></li>
-	  			<li><a href="#">Link 2</a></li>
-	  			<li><a href="#">Link 3</a></li>
-	  			<li><a href="#">Link 4</a></li>
-	  		</ul>
-	  	</nav>
+        <nav class="slides-navigation">
+          <a href="#" class="next">Next</a>
+          <a href="#" class="prev">Previous</a>
+        </nav>
+      </div>
 
-	  	<section class="main">
-	  		<h1>Check out Bourbon Neat</h1>
-	  		<p>
-		  		When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! We have an infinite amount to learn both from nature and from each other
-	  		</p>
-	  		<p>
-				  If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon. I don't know what you could say about a day in which you have seen four beautiful sunsets.
-			  </p>
-			  <p>
-  				Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.
-			  </p>
-			  <button>A button</button>
-	  	</section>
+    </div>
 
-	  	<section class="secondary">
+    <div class="sidebar">
+      <div class="snap-drawer snap-drawer-right">
+        <div>
+          <ul>
+            <li><a href="default.html">Default</a></li>
+            <li><a href="noDrag.html">No Drag</a></li>
+            <li><a href="dragElement.html">Drag Element</a></li>
+            <li><a href="rightDisabled.html">Right Disabled</a></li>
+            <li><a href="hyperextend.html">Hyperextension Disabled</a></li>
+            <li><a href="skinnyThreshold.html">Skinny Threshold</a></li>
+            <li><a href="toggles.html">Toggles</a></li>
+            <li><a href="classNames.html">Class Names</a></li>
+            <li><a href="expand.html">Expanding</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="ratchet/template.html">Ratchet</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-	  		<div class="links">
-	  			<h1>Examples</h1>
-	  			<p>
-	  				Want to get your hands dirty with some Bourbon Neat? Check out the examples to get you started
-  				</p>
-	  			<a href="http://neat.bourbon.io/examples/" targe="blank">neat.bourbon.io/examples</a>
-	  		</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascripts/jquery.easing.1.3.js"></script>
+    <script src="javascripts/jquery.animate-enhanced.min.js"></script>
+    <script src="javascripts/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      $('#slides').superslides({
+        animation: 'fade'
+      });
+    </script>
 
-	  		<div class="links">
-	  			<h1>Documentation</h1>
-	  			<p>
-	  				Read up on everything you need to know about Bourbon Neat over here.
-	  			</p>
-	  			<a href="http://neat.bourbon.io/docs/">neat.bourbon.io/docs/</a>
-	  		</div>
+  	<script src='javascripts/snap.min.js'></script>
+  	<script type="text/javascript">
+  		var snapper = new Snap({
+			  element: document.getElementById('content'),
+			  disable: 'left'
+			});
 
-	  		<div class="links">
-	  			<h1>Fork it</h1>
-	  			<p>
-	  				Make improvements and fix bugs over at github.
-	  			</p>
-	  			<a href="https://github.com/thoughtbot/neat">Fork it</a>
-	  		</div>
-
-  		</section>
-	  </article>
-
-	  <footer>Copyright &copy; 2013 Your Name</footer>
-  </div>
-  
+  		addEvent(document.getElementById('open-right'), 'click', function(){
+				snapper.open('right');
+			});
+			
+  	</script>
   </body>
 </html>
