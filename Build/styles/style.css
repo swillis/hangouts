@@ -56,7 +56,7 @@
   width: 100%; }
 
 #content {
-  background: #666666;
+  background: white;
   height: 100%; }
 
 #slides {
@@ -86,18 +86,18 @@
     position: absolute;
     display: block; }
     .slides-navigation a.prev {
-      left: 0; }
+      left: 20px; }
     .slides-navigation a.next {
-      right: 0; }
+      right: 20px; }
 
 .slides-pagination {
   position: absolute;
   z-index: 3;
-  bottom: 0;
+  bottom: 20px;
   text-align: center;
   width: 100%; }
   .slides-pagination a {
-    border: 2px solid #222222;
+    border: 2px solid white;
     border-radius: 15px;
     width: 10px;
     height: 10px;
@@ -107,11 +107,11 @@
     *zoom: 1;
     *display: inline;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
-    margin: 2px;
+    margin: 0 5px;
     overflow: hidden;
     text-indent: -100%; }
     .slides-pagination a.current {
-      background: #222222; }
+      background: white; }
 
 @font-face {
   font-family: 'entypo';
@@ -131,22 +131,12 @@ body {
   font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6rem;
-  color: #444444; }
+  color: #444444;
+  position: relative; }
 
 a {
   color: #b1c0d2;
   text-decoration: none; }
-
-#container {
-  *zoom: 1;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  #container:before, #container:after {
-    content: " ";
-    display: table; }
-  #container:after {
-    clear: both; }
 
 .navigation {
   position: fixed;
@@ -195,3 +185,44 @@ a {
     width: 100%; }
     .sidebar ul.sidebar-foot li {
       border-top: 1px solid #28323c; }
+
+.flyout {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  bottom: -600px; }
+  .flyout .modal {
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    height: 600px;
+    min-width: 300px;
+    max-width: 600px;
+    border-top: 5px solid #25c35f; }
+    .flyout .modal a.like-button {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-weight: 500;
+      font-size: 16px; }
+      .flyout .modal a.like-button i {
+        padding-right: 5px; }
+
+.fancy-title {
+  position: absolute;
+  width: 100%;
+  z-index: 3; }
+  .fancy-title div {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    border-left: 10px solid #25c35f;
+    padding-left: 40px; }
+  .fancy-title h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 50px black; }

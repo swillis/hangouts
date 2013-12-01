@@ -31,15 +31,12 @@ body {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	color: #444;
+  position: relative;
 }
 
 a {
   color: $link-color;
   text-decoration: none;
-}
-
-#container {
-	@include outer-container;
 }
 
 .navigation {
@@ -122,5 +119,59 @@ a {
     li {
       border-top: 1px solid (lighten($base-color, 5%));
     }
+  }
+}
+
+.flyout {
+  position: absolute;  
+  z-index: 10;
+  width: 100%;
+  bottom: -600px;
+
+  .modal {
+    position: relative;
+    // opacity: 0.9;
+    margin: 0 auto;
+    background: white;
+    height: 600px;
+    min-width: 300px;
+    max-width: 600px;
+    border-top: 5px solid $brand-color;
+
+    a.like-button {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-weight: 500;
+      font-size: 16px;
+
+      i {
+        padding-right: 5px
+      }
+    }
+  }
+}
+
+.fancy-title {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+
+  div {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    border-left: 10px solid $brand-color;
+    padding-left: 40px;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 50px rgba(0,0,0,1);
   }
 }

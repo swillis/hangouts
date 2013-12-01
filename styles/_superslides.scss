@@ -29,10 +29,10 @@
     position: absolute;
     display: block;
     &.prev {
-      left: 0;
+      left: 20px;
     }
     &.next {
-      right: 0;
+      right: 20px;
     }
   }
 }
@@ -40,11 +40,11 @@
 .slides-pagination {
   position: absolute;
   z-index: 3;
-  bottom: 0;
+  bottom: 20px;
   text-align: center;
   width: 100%;
   a {
-    border: 2px solid #222;
+    border: 2px solid #fff;
     border-radius: 15px;
     width: 10px;
     height: 10px;
@@ -54,11 +54,11 @@
     *zoom: 1;
     *display: inline;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
-    margin: 2px;
+    margin: 0 5px;
     overflow: hidden;
     text-indent: -100%;
     &.current {
-      background: #222;
+      background: #fff;
     }
   }
 }
