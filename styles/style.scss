@@ -3,11 +3,11 @@
 // try changing these variables
 $max-width: 100%;
 $base-color: #1e252d;
-$content-background-color: #999;
+$brand-color: #25c35f;
 $base-font-size: 14px;
 $font-primary-color: #666;
-$font-secondary-color: #b1c0d2;
-$link-color: #999;
+// $font-secondary-color: #b1c0d2;
+$link-color: #b1c0d2;
 $base-line-height: 1.6rem;
 $top-gap: 1rem;
 
@@ -24,6 +24,8 @@ $small-screen: max-width 500px;
 
 @import 'superslides';
 
+@import 'vendor/entypo';
+
 body {
 	font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
 	font-size: $base-font-size;
@@ -33,42 +35,92 @@ body {
 
 a {
   color: $link-color;
+  text-decoration: none;
 }
 
 #container {
 	@include outer-container;
 }
 
-nav {
+.navigation {
   position: fixed;
   height: 50px;
   z-index: 9999;
+  width: 100%;
 
-  a {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-  }
+  nav {
+    position: relative;
 
-  .logo,
-  .nav-items {
-    top: 20px
-  }
+    a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+    }
 
-  .logo {
-    position: absolute;
-    left: 60px;
-  }
+    .logo,
+    .nav-items {
+      top: 20px
+    }
 
-  .nav-items {
-    position: absolute;
-    right: 60px;
+    .logo {
+      position: absolute;
+      left: 60px;
+    }
 
-    ul {
+    .nav-items {
+      position: absolute;
+      right: 60px;
 
-      li {
-        display: inline;
+      ul {
+
+        li {
+          display: inline;
+          margin: 0 10px;
+
+          i {
+            color: white;
+            font-size: 60px;
+          }
+        }
       }
+    }
+  }
+}
+
+.sidebar {
+  background: $base-color;
+  color: $link-color;
+  font-size: 16px;
+  font-weight: 300;
+
+  ul {
+
+    li {
+      border-bottom: 1px solid lighten($base-color, 5%);
+
+      a {
+        display: block;
+        padding: 20px;
+
+        &:hover {
+          background: lighten($base-color, 5%);
+          border-right: 5px solid $brand-color;
+        }
+      }
+
+      i {
+        padding-right: 15px;
+      }
+    }
+  }
+
+  ul.sidebar-foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    li {
+      border-top: 1px solid (lighten($base-color, 5%));
     }
   }
 }

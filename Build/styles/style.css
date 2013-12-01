@@ -113,6 +113,20 @@
     .slides-pagination a.current {
       background: #222222; }
 
+@font-face {
+  font-family: 'entypo';
+  src: url('../fonts/entypo/entypo.eot');
+  src: url('../fonts/entypo/entypo-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/entypo/entypo.woff') format('woff'), url('../fonts/entypo/entypo.ttf') format('truetype'), url('../fonts/entypo/entypo.svg') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+i.icon {
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-family: entypo;
+  font-size: 40px;
+  vertical-align: top; }
+
 body {
   font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -120,7 +134,8 @@ body {
   color: #444444; }
 
 a {
-  color: #999999; }
+  color: #b1c0d2;
+  text-decoration: none; }
 
 #container {
   *zoom: 1;
@@ -133,21 +148,50 @@ a {
   #container:after {
     clear: both; }
 
-nav {
+.navigation {
   position: fixed;
   height: 50px;
-  z-index: 9999; }
-  nav a {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white; }
-  nav .logo, nav .nav-items {
-    top: 20px; }
-  nav .logo {
+  z-index: 9999;
+  width: 100%; }
+  .navigation nav {
+    position: relative; }
+    .navigation nav a {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white; }
+    .navigation nav .logo, .navigation nav .nav-items {
+      top: 20px; }
+    .navigation nav .logo {
+      position: absolute;
+      left: 60px; }
+    .navigation nav .nav-items {
+      position: absolute;
+      right: 60px; }
+      .navigation nav .nav-items ul li {
+        display: inline;
+        margin: 0 10px; }
+        .navigation nav .nav-items ul li i {
+          color: white;
+          font-size: 60px; }
+
+.sidebar {
+  background: #1e252d;
+  color: #b1c0d2;
+  font-size: 16px;
+  font-weight: 300; }
+  .sidebar ul li {
+    border-bottom: 1px solid #28323c; }
+    .sidebar ul li a {
+      display: block;
+      padding: 20px; }
+      .sidebar ul li a:hover {
+        background: #28323c;
+        border-right: 5px solid #25c35f; }
+    .sidebar ul li i {
+      padding-right: 15px; }
+  .sidebar ul.sidebar-foot {
     position: absolute;
-    left: 60px; }
-  nav .nav-items {
-    position: absolute;
-    right: 60px; }
-    nav .nav-items ul li {
-      display: inline; }
+    bottom: 0;
+    width: 100%; }
+    .sidebar ul.sidebar-foot li {
+      border-top: 1px solid #28323c; }
