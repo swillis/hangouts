@@ -13,9 +13,9 @@ $('.fancy-title').hide();
 // INTRO
 
 $(window).load(function() {
-  $('.fancy-title').fadeIn(500, function() {
-    $('.fancy-title').delay(1200).fadeOut(500, function() {
-      $('nav').fadeIn(500);
+  $('.fancy-title').fadeIn(1200, function() {
+    $('.fancy-title').fadeOut(1200, function() {
+      $('nav').fadeIn(900);
     });
   });
 })
