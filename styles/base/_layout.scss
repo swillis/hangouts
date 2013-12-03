@@ -1,0 +1,42 @@
+body {
+  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: #444;
+  position: relative;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+#content {
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fancy-title {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+
+  div {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    border-left: 10px solid $brand-color;
+    padding-left: 40px;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: $shadow;
+  }
+}

@@ -44,19 +44,6 @@ $(window).resize(function() {
 })
 
 
-// SUPERSLIDES
-
-$(document).ready(function() {
-  $('#slides').superslides({
-    slide_easing: 'easeInOutCubic',
-    slide_speed: 800,
-    pagination: true,
-    hashchange: true,
-    scrollable: true
-  });
-});
-
-
 // SNAPPER SIDEBAR
 
 var snapper = new Snap({
@@ -78,9 +65,32 @@ $('body').on('click', '.close-nav', function() {
 })
 
 
-// FLYOUTS
+// flyouts
 
-$('body').on('click', '.sidebar li a', function() {
-  $('.flyout').animate({'bottom' : '-600'}, 200);
-  $('.venue-name').addClass('active');
+// name
+
+$('body').on('click', '.sidebar-name', function() {
+  $('.flyout.description').toggleClass( "visible" );
+  $(this).toggleClass('active');
+})
+
+// gallery
+
+$('body').on('click', '.sidebar-gallery', function() {
+  $('.flyout.gallery').toggleClass( "visible" );
+  $(this).toggleClass('active');
+})
+
+// share
+
+$('body').on('click', '.sidebar-share', function() {
+  $('.flyout.share').toggleClass( "visible" );
+  $(this).toggleClass('active');
+})
+
+// contact
+
+$('body').on('click', '.sidebar-contact', function() {
+  $('.flyout.contact').toggleClass( "visible" );
+  $(this).toggleClass('active');
 })

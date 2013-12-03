@@ -1,0 +1,56 @@
+.navigation {
+  position: fixed;
+  height: 50px;
+  z-index: 9999;
+  width: 100%;
+
+  nav {
+    position: relative;
+
+    a {
+      color: white;
+    }
+
+    .logo,
+    .nav-items {
+      top: 40px;
+      text-shadow: $shadow
+    }
+
+    .logo {
+      position: absolute;
+      left: 40px;
+
+      a {
+        font-size: 30px;
+        font-weight: 300;
+
+        span {
+          color: $brand-color;
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    .nav-items {
+      position: absolute;
+      right: 40px;
+
+      ul {
+
+        li {
+          display: inline;
+          margin: 0 10px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          img {
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+}

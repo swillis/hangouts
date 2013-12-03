@@ -1,0 +1,42 @@
+.sidebar {
+  background: $base-color;
+  color: $link-color;
+  font-size: 16px;
+  font-weight: 300;
+
+  ul {
+
+    li {
+      border-bottom: 1px solid lighten($base-color, 5%);
+
+      a {
+        display: block;
+        padding: 20px;
+
+        &:hover {
+          background: lighten($base-color, 5%);
+          border-right: 5px solid $brand-color;
+        }
+      }
+
+      .active {
+        background: lighten($base-color, 5%);
+        border-right: 5px solid $brand-color;
+      }
+
+      i {
+        padding-right: 15px;
+      }
+    }
+  }
+
+  ul.sidebar-foot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    li {
+      border-top: 1px solid (lighten($base-color, 5%));
+    }
+  }
+}
