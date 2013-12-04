@@ -13,7 +13,6 @@
     min-width: 300px;
     max-width: 600px;
     border-top: 5px solid $brand-color;
-    box-shadow: $shadow;
     overflow: scroll;
 
     a.like-button {
@@ -32,6 +31,12 @@
       clear: both;
       display: table;
       padding: 40px 40px 0;
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: $link-color;
+      }
     }
 
     .content {
@@ -42,6 +47,10 @@
 
 .visible {
   bottom: 0px;
+
+  .modal {
+    box-shadow: $shadow;
+  }
 }
 
 .description {
@@ -59,7 +68,7 @@
       }
     }
 
-    .venue-address {
+    .heading .venue-address {
       margin-top: 50px;
       float: left;
       padding-left: 20px;
@@ -116,19 +125,15 @@
 
 .gallery {
 
-  h1 {
-    font-size: 30;
-    margin-bottom: 10px
-  }
-
   .exhibit {
     display: table;
     clear: both;
-    margin-bottom: 20px;
+    padding: 20px 0;
+    border-top: 2px dashed #ededed;
 
     .feature {
       width: 350px;
-      border: 5px solid $link-color;
+      border: 5px solid #ededed;
       float: left;
       margin-right: 20px;
 
@@ -165,6 +170,44 @@
       i {
         padding-right: 15px;
       }
+    }
+  }
+}
+
+.contact {
+
+  .contact-form {
+    text-align: center;
+
+    input,
+    textarea {
+      font-size: 16px;
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+    }
+
+    input[type=text],
+    textarea {
+      border: 2px solid $link-color;
+    }
+
+    .small {
+      width: 248px;
+    }
+
+    textarea,
+    input[type=submit] {
+      width: 510px;
+    }
+
+    input[type=submit] {
+      color: white;
+      padding: 15px;
+      background: $link-color;
+      cursor: pointer;
     }
   }
 }
