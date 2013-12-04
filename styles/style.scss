@@ -1,177 +1,50 @@
+// import bourbon
+
 @import 'bourbon/bourbon';
 
-// try changing these variables
-$max-width: 100%;
+
+// variables
 $base-color: #1e252d;
 $brand-color: #25c35f;
-$base-font-size: 14px;
+$base-font-size: 16px;
 $font-primary-color: #666;
-// $font-secondary-color: #b1c0d2;
 $link-color: #b1c0d2;
 $base-line-height: 1.6rem;
 $top-gap: 1rem;
 
+
 // button styles
+
 $button-color: #CB424E;
 $button-radius: 4px;
 $button-text-color: white;
 
+
+// shadow styles
+
+$shadow: 0px 0px 30px rgba(0, 0, 0, 0.85);
+
+
+// media queries
+
 $small-screen: max-width 500px;
+
+
+// import neat
 
 @import 'neat/neat';
 
-@import 'snapjs';
 
-@import 'superslides';
+// import vendor
 
+@import 'vendor/snapjs';
+@import 'vendor/superslides';
 @import 'vendor/entypo';
 
-body {
-	font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
-	font-size: $base-font-size;
-	line-height: $base-line-height;
-	color: #444;
-  position: relative;
-}
 
-a {
-  color: $link-color;
-  text-decoration: none;
-}
+// import base
 
-.navigation {
-  position: fixed;
-  height: 50px;
-  z-index: 9999;
-  width: 100%;
-
-  nav {
-    position: relative;
-
-    a {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: white;
-    }
-
-    .logo,
-    .nav-items {
-      top: 20px
-    }
-
-    .logo {
-      position: absolute;
-      left: 60px;
-    }
-
-    .nav-items {
-      position: absolute;
-      right: 60px;
-
-      ul {
-
-        li {
-          display: inline;
-          margin: 0 10px;
-
-          i {
-            color: white;
-            font-size: 60px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.sidebar {
-  background: $base-color;
-  color: $link-color;
-  font-size: 16px;
-  font-weight: 300;
-
-  ul {
-
-    li {
-      border-bottom: 1px solid lighten($base-color, 5%);
-
-      a {
-        display: block;
-        padding: 20px;
-
-        &:hover {
-          background: lighten($base-color, 5%);
-          border-right: 5px solid $brand-color;
-        }
-      }
-
-      i {
-        padding-right: 15px;
-      }
-    }
-  }
-
-  ul.sidebar-foot {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
-    li {
-      border-top: 1px solid (lighten($base-color, 5%));
-    }
-  }
-}
-
-.flyout {
-  position: absolute;  
-  z-index: 10;
-  width: 100%;
-  bottom: -600px;
-
-  .modal {
-    position: relative;
-    // opacity: 0.9;
-    margin: 0 auto;
-    background: white;
-    height: 600px;
-    min-width: 300px;
-    max-width: 600px;
-    border-top: 5px solid $brand-color;
-
-    a.like-button {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-weight: 500;
-      font-size: 16px;
-
-      i {
-        padding-right: 5px
-      }
-    }
-  }
-}
-
-.fancy-title {
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-
-  div {
-    position: relative;
-    display: table;
-    margin: 0 auto;
-    border-left: 10px solid $brand-color;
-    padding-left: 40px;
-  }
-
-  h1 {
-    font-size: 80px;
-    font-weight: 500;
-    line-height: 1.2em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    text-shadow: 0px 0px 50px rgba(0,0,0,1);
-  }
-}
+@import 'base/layout';
+@import 'base/navigation';
+@import 'base/sidebar';
+@import 'base/flyout';
