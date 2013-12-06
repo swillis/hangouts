@@ -21,7 +21,7 @@
 
       .active {
         background: lighten($base-color, 5%);
-        border-right: 5px solid $brand-color;
+        border-right: 5px solid #3498db !important;
       }
 
       i {
