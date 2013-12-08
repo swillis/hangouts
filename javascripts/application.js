@@ -95,6 +95,13 @@ $('body').on('click', '.sidebar-name', function() {
   $(this).toggleClass('active');
 })
 
+// newsfeeds
+
+$('body').on('click', '.sidebar-news', function() {
+  $('.flyout.news').toggleClass( "visible" );
+  $(this).toggleClass('active');
+})
+
 // gallery
 
 $('body').on('click', '.sidebar-gallery', function() {
@@ -114,4 +121,11 @@ $('body').on('click', '.sidebar-share', function() {
 $('body').on('click', '.sidebar-contact', function() {
   $('.flyout.contact').toggleClass( "visible" );
   $(this).toggleClass('active');
+})
+
+
+// like button
+
+$('body').on('click', '.sidebar-like', function() {
+  $('.like').text("&hearts;");
 })

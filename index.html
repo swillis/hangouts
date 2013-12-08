@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Hangouts</title>
+    <title>Hangout at The Botanist, Chelsea</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <link rel="stylesheet" type="text/css" href="styles/vendor/reset.css">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <script type="text/javascript" src="//use.typekit.net/pvh8lra.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src='javascripts/masonry.min.js'></script>
   </head>
   <body>
 
@@ -65,14 +66,13 @@
       <div id="slides">
         <div class="slides-container">
           <img src="images/botanist-home.jpg" alt="Cinelli">
-          <img src="images/surly.jpeg" width="1024" height="682" alt="Surly">
-          <img src="images/cinelli-front.jpeg" width="1024" height="683" alt="Cinelli">
-          <img src="images/affinity.jpeg" width="1024" height="685" alt="Affinity">
+          <img src="images/botanist-cocktail.jpg" width="1024" height="683" alt="Cocktail">
+          <img src="images/botanist-dinner.jpg" width="1024" height="685" alt="Dinner">
         </div>
 
         <nav class="slides-navigation">
-          <a href="#" class="next"><i class='icon'>&#59238;</i></a>
-          <a href="#" class="prev"><i class='icon'>&#59237;</i></a>
+          <a href="#" class="next"><i class='icon'>&#59230;</i></a>
+          <a href="#" class="prev"><i class='icon'>&#59229;</i></a>
         </nav>
       </div>
 
@@ -103,7 +103,7 @@
           <div class='venue-details'>
             <a href="#">
               <article class='detail'>
-                <i class='icon like'>&#9825;</i>
+                <i class='icon'>&#128222;</i>
                 <p>07800553805</p>
               </article>
             </a>
@@ -133,6 +133,139 @@
       </div>
 
 
+      <!-- Newsfeed -->
+
+      <div class='flyout news'>
+        <div class='modal'>
+          <!-- like button -->
+          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <!-- header -->
+          <div class='heading'>
+            <h1>Newsfeed</h1>
+            <p>Find out what's been happening at <em>The Botanist</em>.</p>
+          </div>
+          <!-- content -->
+          <div class='content feed'>
+
+            <div id="grid" data-columns>
+
+              <!-- column one -->
+              <div class="column size-1of3">
+
+                <div class='news-item feed-twitter'>
+                  <div class='media-content'>
+                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
+                  </div>
+                  <div class='social-content'>
+                    <h2>Twitter</h2>
+                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
+                  </div>
+                  <div class='foot-content'>
+                    <div class='username'>
+                      <a href="#">@thebotanist</a>
+                    </div>
+                    <ul class='share-item'>
+                      <li><i class='icon'>&#62220;</i></li>
+                      <li><i class='icon'>&#62217;</i></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class='news-item feed-instagram'>
+                  <div class='media-content'>
+                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
+                  </div>
+                  <div class='social-content'>
+                    <h2>Instagram</h2>
+                    <!-- <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p> -->
+                  </div>
+                  <div class='foot-content'>
+                    <div class='username'>
+                      <a href="#">@thebotanist</a>
+                    </div>
+                    <ul class='share-item'>
+                      <li><i class='icon'>&#62220;</i></li>
+                      <li><i class='icon'>&#62217;</i></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- column two -->
+              <div class="column size-1of3">
+
+                <div class='news-item feed-facebook'>
+                  <div class='media-content'>
+                    <!-- <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a> -->
+                  </div>
+                  <div class='social-content'>
+                    <h2>Facebook</h2>
+                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
+                  </div>
+                  <div class='foot-content'>
+                    <div class='username'>
+                      <a href="#">@thebotanist</a>
+                    </div>
+                    <ul class='share-item'>
+                      <li><i class='icon'>&#62220;</i></li>
+                      <li><i class='icon'>&#62217;</i></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class='news-item feed-twitter'>
+                  <div class='media-content'>
+                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
+                  </div>
+                  <div class='social-content'>
+                    <h2>Twitter</h2>
+                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
+                  </div>
+                  <div class='foot-content'>
+                    <div class='username'>
+                      <a href="#">@thebotanist</a>
+                    </div>
+                    <ul class='share-item'>
+                      <li><i class='icon'>&#62220;</i></li>
+                      <li><i class='icon'>&#62217;</i></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- column three -->
+              <div class="column size-1of3">
+
+                <div class='news-item feed-instagram'>
+                  <div class='media-content'>
+                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
+                  </div>
+                  <div class='social-content'>
+                    <h2>Instagram</h2>
+                    <!-- <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p> -->
+                  </div>
+                  <div class='foot-content'>
+                    <div class='username'>
+                      <a href="#">@thebotanist</a>
+                    </div>
+                    <ul class='share-item'>
+                      <li><i class='icon'>&#62220;</i></li>
+                      <li><i class='icon'>&#62217;</i></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
       <!-- gallery -->
 
       <div class='flyout gallery'>
@@ -148,34 +281,13 @@
 
             <div class='exhibit'>
               <div class='feature'>
-                <a href="images/demopage/image-1.jpg" data-lightbox="image-1" title="My caption"><img src="images/botanist-home.jpg"></a>
+                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
               </div>
               <div class='aside'>
                 <h2>The Botanist at dusk</h2>
                 <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#128319;</i>Share</a>
-              </div>
-            </div>
-
-            <div class='exhibit'>
-              <div class='feature'>
-                <img src="images/botanist-home.jpg">
-              </div>
-              <div class='aside'>
-                <h2>The Botanist at dusk</h2>
-                <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#128319;</i>Share</a>
-              </div>
-            </div>
-
-            <div class='exhibit'>
-              <div class='feature'>
-                <img src="images/botanist-home.jpg">
-              </div>
-              <div class='aside'>
-                <h2>The Botanist at dusk</h2>
-                <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#128319;</i>Share</a>
+                <a href="#"><i class='icon'>&#62220;</i></a>
+                <a href="#"><i class='icon'>&#62217;</i></a>
               </div>
             </div>
 
@@ -261,7 +373,6 @@
             <li><a href="#" class='sidebar-contact'><i class='icon'>&#128227;</i>Get in touch</a></li>
             <li><a href="#" class='sidebar-like'><i class='icon like'>&#9825;</i>Like this place</a></li>
           </ul>
-          <div class='twitter'></div>
           <ul class='sidebar-foot'>
             <li><a href="#"><i class='icon'>&#128640;</i>Log out</a></li>
           </ul>
