@@ -9,12 +9,20 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
+
+  &:hover {
+    // color: $brand-color;
+  }
 }
 
 #content {
   background: #fff;
   height: 100%;
   overflow: hidden;
+}
+
+.like {
+  color: #e23e32;
 }
 
 .fancy-title {

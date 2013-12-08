@@ -4,18 +4,30 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <link rel="stylesheet" type="text/css" href="styles/vendor/reset.css">
+    <link href="styles/vendor/lightbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <script type="text/javascript" src="//use.typekit.net/pvh8lra.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
+    <!-- sign in module -->
+    <div class='overlay'>
+      <div class='sign-in-module'>
+        <h2>Sign in</h2>
+        <input class='small name' type="text" name="Username" value="" placeholder='Username'>
+        <input class='small name' type="text" name="Password" value="" placeholder='Password'>
+        <input class='submit-form' type="submit" value="Submit">
+        <a href="#">Forgotten your password?</a>
+        <br>
+        <a href="#">Register</a>
+      </div>
+    </div>
 
 
     <!-- content -->
 
     <div id="content" class="snap-content">
-
 
 
       <!-- navigation -->
@@ -27,7 +39,7 @@
           </div>
           <div class='nav-items'>
             <ul>
-              <li><a href='#'>Sign in</a></li>
+              <li class='sign-in'><a href='#'>Sign in</a></li>
               <li class='open-nav'><a href="#"><img src="images/menu-open.png"></a></li>
               <li class='close-nav'><a href="#"><img src="images/menu-close.png"></a></li>
             </ul>
@@ -35,6 +47,7 @@
         </nav>
       </div>
 
+    
 
 
       <!-- title -->
@@ -45,7 +58,6 @@
           <h1>Chelsea</h1>
         </div>
       </div>
-
 
 
       <!-- slides -->
@@ -74,7 +86,7 @@
       <div class='flyout description'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon'>&hearts;</i>Like this</a>
+          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
           <!-- header -->
           <div class='heading'>
             <div class='profile-image'><img src="images/profile-picture.jpg"></div>
@@ -91,7 +103,7 @@
           <div class='venue-details'>
             <a href="#">
               <article class='detail'>
-                <i class='icon'>&hearts;</i>
+                <i class='icon like'>&#9825;</i>
                 <p>07800553805</p>
               </article>
             </a>
@@ -126,7 +138,7 @@
       <div class='flyout gallery'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon'>&hearts;</i>Like this</a>
+          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
           <!-- header -->
           <div class='heading'>
             <h1>Gallery</h1>
@@ -136,7 +148,7 @@
 
             <div class='exhibit'>
               <div class='feature'>
-                <img src="images/botanist-home.jpg">
+                <a href="images/demopage/image-1.jpg" data-lightbox="image-1" title="My caption"><img src="images/botanist-home.jpg"></a>
               </div>
               <div class='aside'>
                 <h2>The Botanist at dusk</h2>
@@ -178,14 +190,29 @@
       <div class='flyout share'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon'>&hearts;</i>Like this</a>
+          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
           <!-- header -->
           <div class='heading'>
             <h1>Share</h1>
+            <p>Like this venue? Then why not help them out by sharing it with your friends?</p>
           </div>
           <!-- content -->
           <div class='content'>
-
+            <div class='social-icon facebook'>
+              <a href="#"><i class='icon'>&#62220;</i>Facebook</a>
+            </div>
+            <div class='social-icon twitter'>
+              <a href="#"><i class='icon'>&#62217;</i>Twitter</a>
+            </div>
+            <div class='social-icon google'>
+              <a href="#"><i class='icon'>&#62223;</i>Google+</a>
+            </div>
+            <div class='social-icon pinterest'>
+              <a href="#"><i class='icon'>&#62226;</i>Pinterest</a>
+            </div>
+            <div class='social-icon other'>
+              <a href="#"><i class='icon'>&#10067;</i>Other</a>
+            </div>
           </div>
         </div>
       </div>
@@ -197,7 +224,7 @@
       <div class='flyout contact'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon'>&hearts;</i>Like this</a>
+          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
           <!-- header -->
           <div class='heading'>
             <h1>Contact</h1>
@@ -227,11 +254,12 @@
       <div class="snap-drawer snap-drawer-right">
         <div>
           <ul class='sidebar-main'>
-            <li><a href="#" class='sidebar-name'><i class='icon'>&#59172;</i>The Botanist, Chelsea</a></li>
+            <li><a href="#" class='sidebar-name'><i class='icon'>&#59176;</i>The Botanist, Chelsea</a></li>
+            <li><a href="#" class='sidebar-news'><i class='icon'>&#128165;</i>News feed</a></li>
             <li><a href="#" class='sidebar-gallery'><i class='icon'>&#128247;</i>Gallery</a></li>
             <li><a href="#" class='sidebar-share'><i class='icon'>&#128319;</i>Share</a></li>
-            <li><a href="#" class='sidebar-like'><i class='icon'>&hearts;</i>Like this</a></li>
-            <li><a href="#" class='sidebar-contact'><i class='icon'>&#128227;</i>Contact us</a></li>
+            <li><a href="#" class='sidebar-contact'><i class='icon'>&#128227;</i>Get in touch</a></li>
+            <li><a href="#" class='sidebar-like'><i class='icon like'>&#9825;</i>Like this place</a></li>
           </ul>
           <div class='twitter'></div>
           <ul class='sidebar-foot'>
@@ -246,6 +274,8 @@
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascripts/lightbox-2.6.min.js"></script>
+
     <script src="javascripts/jquery.easing.1.3.js"></script>
     <script src="javascripts/jquery.animate-enhanced.min.js"></script>
     <script src="javascripts/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
@@ -255,7 +285,6 @@
         // play: 5000
       });
     </script>
-
   	<script src='javascripts/snap.min.js'></script>
     <script src='javascripts/application.js'></script>
 
