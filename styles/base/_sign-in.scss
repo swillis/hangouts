@@ -1,0 +1,56 @@
+.overlay {
+  display: none;
+  position: relative;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+
+  .sign-in-module {
+    position: absolute;
+    width: 400px;
+    top: 10%;
+    left: 50%;
+    margin-left: -200px;
+    background: white;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: $shadow;
+    border-top: 5px solid $brand-color;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: $brand-color;
+      font-weight: 500;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 280px;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 14px;
+
+      &[type=text] {
+        border: 2px solid $link-color;
+      }
+
+      &[type=submit] {
+        border: none;
+        background: $link-color;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          background: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  display: block;
+}

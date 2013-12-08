@@ -9,6 +9,8 @@ $('nav').hide();
 
 $('.fancy-title').hide();
 
+// $('.overlay').hide();
+
 
 // INTRO
 
@@ -42,6 +44,25 @@ $(window).resize(function() {
     'padding-top': halfWay - headHeight - navHeight
   })
 })
+
+
+// sign in
+
+$('body').on('click', '.sign-in', function() {
+  $('.overlay').addClass('visible', 1000, "swing");
+})
+
+$('.overlay').click(function() {
+  //Hide the menus if visible
+  var checkVisibility = $(this).hasClass('visible');
+  if (checkVisibility == true) {
+    $(this).removeClass('visible', 300, "swing");
+  }
+});
+
+$('.sign-in-module').click(function(event){
+    event.stopPropagation();
+});
 
 
 // SNAPPER SIDEBAR
