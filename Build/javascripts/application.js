@@ -11,6 +11,10 @@ $('.fancy-title').hide();
 
 // $('.overlay').hide();
 
+// var itemHeight = $('.flyout').height();
+
+// $('.flyout').css("bottom", - itemHeight);
+
 
 // INTRO
 
@@ -79,7 +83,7 @@ $('body').on('click', '.open-nav', function() {
   $('.close-nav').show();
 })
 
-$('body').on('click', '.close-nav', function() {
+$('body').on('click', '.close-nav, .sidebar-main li a', function() {
   snapper.close('right');
   $('.close-nav').hide();
   $('.open-nav').show();
@@ -88,40 +92,67 @@ $('body').on('click', '.close-nav', function() {
 
 // flyouts
 
+
+
 // name
 
 $('body').on('click', '.sidebar-name', function() {
+  if ($(".flyout.visible").length > 0) {
+    $('.flyout').removeClass('visible');
+    $('.sidebar-main li a').removeClass('active');
+    // alert('wat');
+  }
   $('.flyout.description').toggleClass( "visible" );
   $(this).toggleClass('active');
 })
 
-// newsfeeds
+// // newsfeeds
 
-$('body').on('click', '.sidebar-news', function() {
-  $('.flyout.news').toggleClass( "visible" );
-  $(this).toggleClass('active');
-})
+// $('body').on('click', '.sidebar-news', function() {
+//   if ($(".flyout.visible").length > 0) {
+//     $('.flyout').removeClass('visible');
+//     $('.sidebar-main li a').removeClass('active');
+//     // alert('wat');
+//   }
+//   $('.flyout.news').toggleClass( "visible" );
+//   $(this).toggleClass('active');
+// })
 
-// gallery
+// // gallery
 
-$('body').on('click', '.sidebar-gallery', function() {
-  $('.flyout.gallery').toggleClass( "visible" );
-  $(this).toggleClass('active');
-})
+// $('body').on('click', '.sidebar-gallery', function() {
+//   if ($(".flyout.visible").length > 0) {
+//     $('.flyout').removeClass('visible');
+//     $('.sidebar-main li a').removeClass('active');
+//     // alert('wat');
+//   }
+//   $('.flyout.gallery').toggleClass( "visible" );
+//   $(this).toggleClass('active');
+// })
 
-// share
+// // share
 
-$('body').on('click', '.sidebar-share', function() {
-  $('.flyout.share').toggleClass( "visible" );
-  $(this).toggleClass('active');
-})
+// $('body').on('click', '.sidebar-share', function() {
+//   if ($(".flyout.visible").length > 0) {
+//     $('.flyout').removeClass('visible');
+//     $('.sidebar-main li a').removeClass('active');
+//     // alert('wat');
+//   }
+//   $('.flyout.share').toggleClass( "visible" );
+//   $(this).toggleClass('active');
+// })
 
-// contact
+// // contact
 
-$('body').on('click', '.sidebar-contact', function() {
-  $('.flyout.contact').toggleClass( "visible" );
-  $(this).toggleClass('active');
-})
+// $('body').on('click', '.sidebar-contact', function() {
+//   if ($(".flyout.visible").length > 0) {
+//     $('.flyout').removeClass('visible');
+//     $('.sidebar-main li a').removeClass('active');
+//     // alert('wat');
+//   }
+//   $('.flyout.contact').toggleClass( "visible" );
+//   $(this).toggleClass('active');
+// })
 
 
 // like button

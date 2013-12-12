@@ -13,38 +13,48 @@
 
     .logo,
     .nav-items {
-      top: 40px;
+      top: 20px;
       text-shadow: $shadow
     }
 
     .logo {
       position: absolute;
-      left: 40px;
+      left: 20px;
 
       a {
         font-size: 24px;
-        font-weight: 200;
+        font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 2px;
+      }
 
-        span {
-          color: $brand-color;
-          font-weight: 500;
-          // letter-spacing: 2px;
-          // text-transform: uppercase;
+      .venue-title {
+        color: $brand-color;
+        font-weight: 500;
+
+        @media (max-width: $small-screen) {
+          color: white;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+
+      .platform-title {
+
+        @media (max-width: $small-screen) {
+          display: none;
         }
       }
     }
 
     .nav-items {
       position: absolute;
-      right: 40px;
+      right: 20px;
 
       ul {
 
         li {
           display: inline;
-          margin: 0 10px;
           letter-spacing: 1px;
           text-transform: uppercase;
 
@@ -53,6 +63,11 @@
 
             &:hover {
               color: $brand-color;
+            }
+
+            i {
+              font-size: 50px;
+              vertical-align: top;
             }
           }
 

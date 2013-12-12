@@ -2,18 +2,22 @@
   position: absolute;  
   z-index: 10;
   width: 100%;
-  bottom: -600px;
+  height: 80%;
   @include transition( all 0.3s );
 
   .modal {
     position: relative;
     margin: 0 auto;
     background: white;
-    height: 600px;
-    min-width: 300px;
-    max-width: 600px;
+    height: 100%;
+
+    max-width: 960px;
     border-top: 5px solid $brand-color;
     overflow: scroll;
+
+    @media (max-width: $small-screen) {
+      // overflow: scroll;
+    }
 
     a.like-button {
       position: absolute;
@@ -53,7 +57,7 @@
 }
 
 .visible {
-  bottom: 0px;
+  bottom: 0px !important;
 
   .modal {
     box-shadow: $shadow;
@@ -99,13 +103,14 @@
     }
 
   .venue-details {
+    display: block;
     clear: both;
-    display: table;
+    width: 100%;
 
     .detail {
       padding: 20px 0;
       text-align: center;
-      width: 150px;
+      width: 25%;
       float: left;
       overflow: hidden;
 
@@ -124,9 +129,10 @@
   }
 
   .map {
-    position: relative;
+    // position: absolute;
     width: 100%;
-    height: 145px;
+    // height: 150px;
+    bottom: 0
   }
 }
 
@@ -139,10 +145,10 @@
     border-bottom: 2px dashed #ededed;
 
     .feature {
-      width: 350px;
+      min-width: 350px;
+      max-width: 70%;
       border: 5px solid #ededed;
       float: left;
-      margin-right: 20px;
 
       img {
         width: 100%;
@@ -152,7 +158,9 @@
 
   .aside {
     float: left;
-    width: 150px;
+    min-width: 150px;
+    max-width: 30%;
+    padding: 0 20px;
 
     h2 {
       font-size: 18px;
