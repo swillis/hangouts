@@ -52,12 +52,16 @@ $('body').on('click', '.sign-in', function() {
   $('.overlay').addClass('visible');
 })
 
-$('.overlay').click(function() {
+$('body').on('click', '.overlay', function() {
   var checkVisibility = $(this).hasClass('visible');
   if (checkVisibility == true) {
     $(this).removeClass('visible');
   }
 });
+
+$('.sign-in-close').click(function() {
+  $('.overlay').removeClass('visible');
+})
 
 $('.sign-in-module').click(function(event){
     event.stopPropagation();
@@ -182,5 +186,4 @@ $(document).ready(function() {
   }).imagesLoaded(function() {
     $(this).masonry('reload');
   });
-
 });
