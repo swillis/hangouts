@@ -17,6 +17,13 @@
     box-shadow: $shadow;
     border-top: 5px solid $brand-color;
 
+    @media (max-width: $small-screen) {
+      width: 100%;
+      margin: 0;
+      top: 0;
+      left: 0;
+    }
+
     h2 {
       font-size: 30px;
       margin-bottom: 20px;
@@ -27,7 +34,8 @@
     input {
       display: block;
       margin: 0 auto;
-      width: 280px;
+      max-width: 100%;
+      min-width: 230px;
       margin-bottom: 10px;
       padding: 15px;
       border-radius: 5px;
@@ -46,6 +54,16 @@
         &:hover {
           background: $brand-color;
         }
+      }
+    }
+
+    .sign-in-close {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+
+      .icon {
+        font-size: 60px;
       }
     }
   }
