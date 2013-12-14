@@ -51,30 +51,12 @@
       position: absolute;
       right: 20px;
 
-      ul {
+      i {
+        font-size: 60px;
+      }
 
-        li {
-          display: inline;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-
-          a {
-            @include transition( all 0.3s );
-
-            &:hover {
-              color: $brand-color;
-            }
-
-            i {
-              font-size: 50px;
-              vertical-align: top;
-            }
-          }
-
-          img {
-            vertical-align: top;
-          }
-        }
+      .icon {
+        font-size: 120px;
       }
     }
   }

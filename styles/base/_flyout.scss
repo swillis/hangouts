@@ -15,10 +15,6 @@
     border-top: 5px solid $brand-color;
     overflow: scroll;
 
-    @media (max-width: $small-screen) {
-      // overflow: scroll;
-    }
-
     .corner-buttons {
       position: absolute;
       top: 10px;
@@ -37,12 +33,21 @@
 
       .like-button {
         margin-right: 10px;
+
+        span {
+
+          margin-left: 5px;
+
+          @media (max-width: $small-screen) {
+            display: none;
+          }
+        }
       }
 
       .close-button {
 
         i {
-          font-size: 80px;
+          font-size: 60px;
         }
 
       }
@@ -51,7 +56,7 @@
     .heading {
       clear: both;
       display: table;
-      padding: 40px 40px 20px;
+      padding: 40px 40px;
       width: 100%;
       border-bottom: 2px dashed #ededed;
 
@@ -89,28 +94,47 @@
       img {
         height: 100%;
       }
+
+      @media (max-width: $small-screen) {
+        display: none;
+      }
     }
 
-    .heading .venue-address {
-      margin-top: 50px;
-      float: left;
-      padding-left: 20px;
+    .heading {
+      // margin: 0 auto;
 
-      h1 {
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: $brand-color;
-        font-weight: 500;
-        margin-bottom: 3px;
+      .center-heading {
+        display: table;
+        margin: 0 auto;
       }
 
-      h2 {
-        font-size: 18px;
-      }
-      h3 {
-        font-size: 18px;
-        color: $link-color;
+      .venue-address {
+        margin-top: 50px;
+        float: left;
+        padding-left: 40px;
+
+        h1 {
+          font-size: 24px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $brand-color;
+          font-weight: 500;
+          margin-bottom: 3px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        h3 {
+          font-size: 18px;
+          color: $link-color;
+        }
+
+        @media (max-width: $small-screen) {
+          margin: 0;
+          padding: 0;
+        }
       }
     }
 
@@ -126,8 +150,14 @@
       float: left;
       overflow: hidden;
 
+      @media (max-width: $small-screen) {
+        width: 100%;
+        border-top: 1px solid $link-color;
+      }
+
     &:hover {
-      background: red;
+      background: $link-color;
+      color: #fff;
     }
 
       i {
@@ -173,6 +203,10 @@
     min-width: 150px;
     max-width: 30%;
     padding: 0 20px;
+
+    @media (max-width: $small-screen) {
+      padding: 10px 0 0;
+    }
 
     h2 {
       font-size: 18px;
@@ -263,12 +297,12 @@
 
     input,
     textarea {
+      display: block;
       font-size: 16px;
       -webkit-appearance: none;
       border: none;
       border-radius: 5px;
       padding: 10px 15px;
-      margin: 0 5px 20px;
     }
 
     input[type=text],
@@ -276,13 +310,11 @@
       border: 2px solid $link-color;
     }
 
-    .small {
-      width: 248px;
-    }
-
     textarea,
-    input[type=submit] {
-      width: 510px;
+    input {
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
     }
 
     input[type=submit] {
