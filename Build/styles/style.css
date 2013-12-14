@@ -152,6 +152,9 @@ a {
   overflow: hidden; }
 
 .like {
+  color: #b1c0d2; }
+
+.liked {
   color: #e23e32; }
 
 .fancy-title {
@@ -244,15 +247,12 @@ a {
       border-right: 5px solid #3498db !important; }
     .sidebar ul li i {
       padding-right: 15px; }
-  .sidebar ul.sidebar-foot {
-    position: absolute;
-    bottom: 0;
-    width: 100%; }
-    .sidebar ul.sidebar-foot li {
-      border-top: 1px solid #28323c;
-      border-bottom: none; }
-      .sidebar ul.sidebar-foot li a:hover {
-        border-right: 5px solid #e74c3c; }
+  .sidebar p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #47576a;
+    padding: 20px 0;
+    text-align: center; }
 
 .flyout {
   position: absolute;
@@ -266,24 +266,26 @@ a {
     position: relative;
     margin: 0 auto;
     background: white;
-    height: 100%;
+    max-height: 100%;
     max-width: 960px;
     border-top: 5px solid #25c35f;
     overflow: scroll; }
     @media (max-width: 640px) { }
-    .flyout .modal a.like-button {
+    .flyout .modal .corner-buttons {
       position: absolute;
-      top: 15px;
-      right: 20px;
+      top: 10px;
+      right: 10px;
       font-weight: 500;
       font-size: 16px;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
-      .flyout .modal a.like-button i {
-        padding-right: 5px; }
-      .flyout .modal a.like-button:hover {
+      .flyout .modal .corner-buttons:hover {
         color: #708cad; }
+      .flyout .modal .corner-buttons .like-button {
+        margin-right: 10px; }
+      .flyout .modal .corner-buttons .close-button i {
+        font-size: 80px; }
     .flyout .modal .heading {
       clear: both;
       display: table;
@@ -295,7 +297,7 @@ a {
         margin-bottom: 10px;
         color: #b1c0d2; }
     .flyout .modal .content {
-      padding: 20px 40px 0; }
+      padding: 40px; }
 
 .visible {
   bottom: 0px !important; }
@@ -353,7 +355,7 @@ a {
   padding: 20px 0;
   border-bottom: 2px dashed #ededed; }
   .gallery .exhibit .feature {
-    min-width: 350px;
+    min-width: 240px;
     max-width: 70%;
     border: 5px solid #ededed;
     float: left; }
@@ -426,6 +428,33 @@ a {
     cursor: pointer; }
     .contact .contact-form input[type=submit]:hover {
       background: #708cad; }
+
+.news #newsfeed {
+  max-width: 103.125%;
+  margin-left: 2%; }
+  .news #newsfeed .item {
+    background-color: #ededed;
+    max-width: 30%;
+    min-width: 250px;
+    margin: 0 auto;
+    float: left; }
+    .news #newsfeed .item .head {
+      position: relative;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 20px; }
+      .news #newsfeed .item .head .medium {
+        position: absolute;
+        top: 20px;
+        right: 20px; }
+        .news #newsfeed .item .head .medium .icon {
+          font-size: 40px; }
+    .news #newsfeed .item .social-content img {
+      width: 100%; }
+    .news #newsfeed .item .copy {
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.1); }
 
 .overlay {
   display: none;

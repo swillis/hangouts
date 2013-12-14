@@ -10,9 +10,11 @@
     <link href="styles/vendor/lightbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="styles/vendor/small-device.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="//use.typekit.net/pvh8lra.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src='javascripts/masonry.min.js'></script>
+    <script src="javascripts/modernizr-2.5.3.min.js"></script>
+    <script src='javascripts/jquery.masonry.min.js'></script>
   </head>
   <body>
 
@@ -89,7 +91,10 @@
       <div class='flyout description'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <div class='corner-buttons'>
+            <a href="#" class='like-button'><i class='icon like'>&hearts;</i>Like this</a>
+            <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
+          </div>
           <!-- header -->
           <div class='heading'>
             <div class='center-heading'>
@@ -142,7 +147,10 @@
       <div class='flyout news'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <div class='corner-buttons'>
+            <a href="#" class='like-button'><i class='icon like'>&hearts;</i>Like this</a>
+            <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
+          </div>
           <!-- header -->
           <div class='heading'>
             <h1>Newsfeed</h1>
@@ -151,117 +159,86 @@
           <!-- content -->
           <div class='content feed'>
 
-            <div id="grid" data-columns>
-
-              <!-- column one -->
-              <div class="column size-1of3">
-
-                <div class='news-item feed-twitter'>
-                  <div class='media-content'>
-                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
-                  </div>
-                  <div class='social-content'>
-                    <h2>Twitter</h2>
-                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
-                  </div>
-                  <div class='foot-content'>
-                    <div class='username'>
-                      <a href="#">@thebotanist</a>
-                    </div>
-                    <ul class='share-item'>
-                      <li><i class='icon'>&#62220;</i></li>
-                      <li><i class='icon'>&#62217;</i></li>
-                    </ul>
-                  </div>
+            <div id="newsfeed" class="container clearfix">
+              
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
-
-                <div class='news-item feed-instagram'>
-                  <div class='media-content'>
-                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
-                  </div>
-                  <div class='social-content'>
-                    <h2>Instagram</h2>
-                    <!-- <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p> -->
-                  </div>
-                  <div class='foot-content'>
-                    <div class='username'>
-                      <a href="#">@thebotanist</a>
-                    </div>
-                    <ul class='share-item'>
-                      <li><i class='icon'>&#62220;</i></li>
-                      <li><i class='icon'>&#62217;</i></li>
-                    </ul>
-                  </div>
+                <div class='social-content'>
+                  <!-- <img src="images/botanist-home.jpg"> -->
                 </div>
-
-              </div>
-
-              <!-- column two -->
-              <div class="column size-1of3">
-
-                <div class='news-item feed-facebook'>
-                  <div class='media-content'>
-                    <!-- <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a> -->
-                  </div>
-                  <div class='social-content'>
-                    <h2>Facebook</h2>
-                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
-                  </div>
-                  <div class='foot-content'>
-                    <div class='username'>
-                      <a href="#">@thebotanist</a>
-                    </div>
-                    <ul class='share-item'>
-                      <li><i class='icon'>&#62220;</i></li>
-                      <li><i class='icon'>&#62217;</i></li>
-                    </ul>
-                  </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
                 </div>
+              </article>
 
-                <div class='news-item feed-twitter'>
-                  <div class='media-content'>
-                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
-                  </div>
-                  <div class='social-content'>
-                    <h2>Twitter</h2>
-                    <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p>
-                  </div>
-                  <div class='foot-content'>
-                    <div class='username'>
-                      <a href="#">@thebotanist</a>
-                    </div>
-                    <ul class='share-item'>
-                      <li><i class='icon'>&#62220;</i></li>
-                      <li><i class='icon'>&#62217;</i></li>
-                    </ul>
-                  </div>
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
-
-              </div>
-
-              <!-- column three -->
-              <div class="column size-1of3">
-
-                <div class='news-item feed-instagram'>
-                  <div class='media-content'>
-                    <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
-                  </div>
-                  <div class='social-content'>
-                    <h2>Instagram</h2>
-                    <!-- <p>This is a really great thing that I found http://bit.ly/89765. You should share it with your pals.</p> -->
-                  </div>
-                  <div class='foot-content'>
-                    <div class='username'>
-                      <a href="#">@thebotanist</a>
-                    </div>
-                    <ul class='share-item'>
-                      <li><i class='icon'>&#62220;</i></li>
-                      <li><i class='icon'>&#62217;</i></li>
-                    </ul>
-                  </div>
+                <div class='social-content'>
+                  <!-- <img src="images/botanist-home.jpg"> -->
                 </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+              </article>
 
-              </div>
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
+                </div>
+                <div class='social-content'>
+                  <!-- <img src="images/botanist-home.jpg"> -->
+                </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+              </article>
+              
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
+                </div>
+                <div class='social-content'>
+                  <img src="images/botanist-home.jpg">
+                </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+              </article>
+
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
+                </div>
+                <div class='social-content'>
+                  <!-- <img src="images/botanist-home.jpg"> -->
+                </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+              </article>
+
+              <article class="item facebook">
+                <div class='head'>
+                  <a href="#">Facebook</a>
+                  <div class='medium'><i class='icon'>&#10078;</i></div>
+                </div>
+                <div class='social-content'>
+                  <!-- <img src="images/botanist-home.jpg"> -->
+                </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+              </article>
+
 
             </div>
 
@@ -275,7 +252,10 @@
       <div class='flyout gallery'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <div class='corner-buttons'>
+            <a href="#" class='like-button'><i class='icon like'>&hearts;</i>Like this</a>
+            <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
+          </div>
           <!-- header -->
           <div class='heading'>
             <h1>Gallery</h1>
@@ -330,7 +310,10 @@
       <div class='flyout share'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <div class='corner-buttons'>
+            <a href="#" class='like-button'><i class='icon like'>&hearts;</i>Like this</a>
+            <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
+          </div>
           <!-- header -->
           <div class='heading'>
             <h1>Share</h1>
@@ -364,7 +347,10 @@
       <div class='flyout contact'>
         <div class='modal'>
           <!-- like button -->
-          <a href="#" class='like-button'><i class='icon like'>&#9825;</i>Like this</a>
+          <div class='corner-buttons'>
+            <a href="#" class='like-button'><i class='icon like'>&hearts;</i>Like this</a>
+            <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
+          </div>
           <!-- header -->
           <div class='heading'>
             <h1>Contact</h1>
@@ -379,9 +365,6 @@
           </div>
         </div>
       </div>
-      
-
-
 
     </div>
 
@@ -400,10 +383,11 @@
             <li><a href="#" class='sidebar-gallery'><i class='icon'>&#128247;</i>Gallery</a></li>
             <li><a href="#" class='sidebar-share'><i class='icon'>&#128319;</i>Share</a></li>
             <li><a href="#" class='sidebar-contact'><i class='icon'>&#128227;</i>Get in touch</a></li>
-            <li><a href="#" class='sidebar-like'><i class='icon like'>&#9825;</i>Like this place</a></li>
+            <li><a href="#" class='sidebar-like'><i class='icon like'>&hearts;</i>Like this place</a></li>
             <li><a href="#" class='sign-in'><i class='icon'>&#10002;</i>Sign in</a></li>
-            <li><a href="#" class='sign-in'><i class='icon'>&#128640;</i>Log out</a></li>
+            <li><a href="#" class='log-out'><i class='icon'>&#128640;</i>Log out</a></li>
           </ul>
+          <p class='legal'>&copy; <a href="#">Hangout.at</a>. All rights reserved.</p>
 <!--           <ul class='sidebar-foot'>
             <li><a href="#"><i class='icon'>&#128640;</i>Log out</a></li>
           </ul> -->
@@ -413,9 +397,7 @@
 
     <!-- end sidebar -->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascripts/lightbox-2.6.min.js"></script>
-
     <script src="javascripts/jquery.easing.1.3.js"></script>
     <script src="javascripts/jquery.animate-enhanced.min.js"></script>
     <script src="javascripts/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
