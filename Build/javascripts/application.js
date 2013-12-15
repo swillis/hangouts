@@ -110,7 +110,7 @@ $('body').on('click', '.sidebar-name', function() {
     $('.sidebar-main li a').not($(this)).removeClass('active');
   }
   $('.flyout.description').toggleClass( "visible" );
-  $(this).toggleClass('active');
+  $(this).toggleClass('active' );
 })
 
 // newsfeeds
@@ -180,10 +180,14 @@ $(document).ready(function() {
   $('#newsfeed').masonry({
     columnWidth: $('#newsfeed').width()/3,
     itemSelector: '.item',
-    gutter: 10,
+    "gutter": 10,
     // isFitWidth: true,
     isAnimated: !Modernizr.csstransitions
   }).imagesLoaded(function() {
     $(this).masonry('reload');
   });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> master

@@ -9,9 +9,10 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
+  @include transition( all, 0.3s );
 
   &:hover {
-    // color: $brand-color;
+    // color: darken($link-color, 50%);
   }
 }
 
@@ -30,9 +31,14 @@ a {
 }
 
 .fancy-title {
+  display: none;
   position: absolute;
   width: 100%;
   z-index: 3;
+
+  @media (max-width: $small-screen) {
+    visibility: none;
+  }
 
   div {
     position: relative;
@@ -40,6 +46,11 @@ a {
     margin: 0 auto;
     border-left: 10px solid $brand-color;
     padding-left: 40px;
+
+    @media (max-width: $small-screen) {
+      border-width: 5px;
+      padding-left: 20px;
+    }
   }
 
   h1 {
@@ -50,5 +61,10 @@ a {
     text-transform: uppercase;
     letter-spacing: 10px;
     text-shadow: $shadow;
+
+    @media (max-width: $small-screen) {
+      font-size: 20px;
+      letter-spacing: 5px;
+    }
   }
 }
