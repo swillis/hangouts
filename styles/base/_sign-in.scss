@@ -1,9 +1,9 @@
 .overlay {
-  display: none;
+  opacity: 0;
   position: relative;
   height: 100%;
   background: rgba(0,0,0,0.6);
-  z-index: 9999;
+  z-index: 1;
 
   .sign-in-module {
     position: absolute;
@@ -70,5 +70,7 @@
 }
 
 .visible {
-  display: block;
+  opacity: 1;
+  z-index: 9999;
+  // @include transition(all, 0.5s);
 }

@@ -1,4 +1,5 @@
 <html>
+
   <head>
     <title>Hangout at The Botanist, Chelsea</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="styles/vendor/small-device.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script type="text/javascript" src="//use.typekit.net/pvh8lra.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="javascripts/modernizr-2.5.3.min.js"></script>
     <script src='javascripts/jquery.masonry.min.js'></script>
   </head>
+
   <body>
 
     <!-- sign in module -->
@@ -47,7 +50,7 @@
           </div>
           <div class='nav-items'>
             <ul>
-              <li class='open-nav'><a href="#"><i class=''>&#9776;</i></a></li>
+              <li class='open-nav'><a class='open-menu' href="#"><i>&#9776;</i></a></li>
               <li class='close-nav'><a href="#"><i class='icon'>&#10062;</i></a></li>
             </ul>
           </div>
@@ -175,9 +178,9 @@
                 </div>
               </article>
 
-              <article class="item facebook">
+              <article class="item gplus">
                 <div class='head'>
-                  <a href="#">Facebook</a>
+                  <a href="#">Google+</a>
                   <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
                 <div class='social-content'>
@@ -188,9 +191,9 @@
                 </div>
               </article>
 
-              <article class="item facebook">
+              <article class="item twitter">
                 <div class='head'>
-                  <a href="#">Facebook</a>
+                  <a href="#">Twitter</a>
                   <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
                 <div class='social-content'>
@@ -201,9 +204,9 @@
                 </div>
               </article>
               
-              <article class="item facebook">
+              <article class="item twitter large">
                 <div class='head'>
-                  <a href="#">Facebook</a>
+                  <a href="#">Twitter</a>
                   <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
                 <div class='social-content'>
@@ -214,13 +217,14 @@
                 </div>
               </article>
 
-              <article class="item facebook">
+              <article class="item vine">
                 <div class='head'>
-                  <a href="#">Facebook</a>
+                  <a href="#">Vine</a>
                   <div class='medium'><i class='icon'>&#10078;</i></div>
                 </div>
                 <div class='social-content'>
                   <!-- <img src="images/botanist-home.jpg"> -->
+                  <iframe width="560" height="315" src="//www.youtube.com/embed/vhIEV_KqhBI" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class='copy'>
                   <p>Lots of lovely copy describing the piece of content featured in this article.</p>
@@ -273,12 +277,14 @@
                 <p>This is a short summary of the photograph.</p>
                 <a href="#"><i class='icon'>&#62220;</i></a>
                 <a href="#"><i class='icon'>&#62217;</i></a>
+                <a href="#"><i class='icon'>&#62223;</i></a>
+
               </div>
             </div>
 
             <div class='exhibit'>
               <div class='feature'>
-                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-cocktail.jpg" width="1024" height="683" alt="Cocktail"></a>
+                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-cocktail.jpg"alt="Cocktail"></a>
               </div>
               <div class='aside'>
                 <h2>The Botanist at dusk</h2>
@@ -290,7 +296,7 @@
 
             <div class='exhibit'>
               <div class='feature'>
-                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-dinner.jpg" width="1024" height="685" alt="Dinner"></a>
+                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-dinner.jpg" alt="Dinner"></a>
               </div>
               <div class='aside'>
                 <h2>The Botanist at dusk</h2>
@@ -405,7 +411,7 @@
     <script>
       $('#slides').superslides({
         animation: 'fade',
-        // play: 5000
+        play: 5000
       });
     </script>
   	<script src='javascripts/snap.min.js'></script>
