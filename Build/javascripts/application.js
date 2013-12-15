@@ -16,7 +16,7 @@ $('.log-out').hide();
 
 $(window).load(function() {
   $('.fancy-title').fadeIn(500, function() {
-    $('.fancy-title').delay(1200).fadeOut(500, function() {
+    $('.fancy-title').fadeOut(1500, function() {
       $('nav').fadeIn(500);
     });
   });
@@ -188,3 +188,11 @@ $(document).ready(function() {
   });
 });
 
+
+// change color
+
+var colors = ['#fff', 'transparent'];
+
+$.each(colors, function(i, color){
+    setInterval(function(){$('.open-menu').css('color', color)}, (i+1)*4000);
+});

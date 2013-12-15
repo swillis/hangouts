@@ -394,7 +394,7 @@ a {
   background: #ededed; }
   @media (max-width: 640px) {
     .gallery .aside {
-      padding: 10px 0 0; } }
+      padding: 10px; } }
   .gallery .aside h2 {
     font-size: 18px;
     font-weight: 500;
@@ -405,6 +405,8 @@ a {
   .gallery .aside a {
     display: inline;
     padding: 10px 10px 0 0; }
+    .gallery .aside a:hover {
+      color: #304154; }
     .gallery .aside a i {
       font-size: 50px; }
 
