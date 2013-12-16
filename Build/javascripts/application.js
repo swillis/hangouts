@@ -15,15 +15,9 @@ $('.log-out').hide();
 // INTRO
 
 $(window).load(function() {
-<<<<<<< HEAD
-  $('.fancy-title').fadeIn(1200, function() {
-    $('.fancy-title').fadeOut(1200, function() {
-      $('nav').fadeIn(900);
-=======
   $('.fancy-title').fadeIn(500, function() {
     $('.fancy-title').fadeOut(1500, function() {
       $('nav').fadeIn(500);
->>>>>>> master
     });
   });
 })
@@ -193,18 +187,3 @@ $(document).ready(function() {
     $(this).masonry('reload');
   });
 });
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> master
-=======
-
-// change color
-
-var colors = ['#fff', 'transparent'];
-
-$.each(colors, function(i, color){
-    setInterval(function(){$('.open-menu').css('color', color)}, (i+1)*4000);
-});
->>>>>>> master
