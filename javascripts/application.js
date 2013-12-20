@@ -87,7 +87,7 @@ var snapper = new Snap({
   tapToClose: false
 });
 
-$('body').on('click', '.open-nav', function() {
+$('body').on('click', '.open-nav, .open-menu', function() {
   snapper.open('right');
   $('.open-nav').hide();
   $('.close-nav').show();
@@ -157,6 +157,11 @@ $('body').on('click', '.sidebar-contact', function() {
   $(this).toggleClass('active');
 })
 
+$('body').on('click', '.option', function() {
+  $('.option').removeClass('selected');
+  $(this).toggleClass('selected');
+})
+
 // close
 
 $('body').on('click', '.close-button', function() {
@@ -169,6 +174,7 @@ $('body').on('click', '.close-button', function() {
 
 $('body').on('click', '.sidebar-like, .like-button', function() {
   $('.like').toggleClass('liked', 500);
+  $('.large').toggleClass('selected');
 })
 
 
