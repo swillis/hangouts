@@ -6,20 +6,18 @@
 
   nav {
     position: relative;
+    width: 100%;
 
     a {
       color: white;
     }
 
-    .logo,
-    .nav-items {
-      top: 20px;
-      text-shadow: $shadow
-    }
-
     .logo {
+      top: 20px;
+      text-shadow: $shadow;
       position: absolute;
       left: 20px;
+      max-width: 70%;
 
       a {
         font-size: 24px;
@@ -30,16 +28,19 @@
 
       .venue-title {
         color: $brand-color;
-        font-weight: 500;
+        font-weight: 600;
 
         @media (max-width: $small-screen) {
           color: white;
-          font-weight: 400;
+          font-weight: 600;
           font-size: 20px;
+          width: 50%;
         }
       }
 
       .platform-title {
+        text-transform: none;
+        font-weight: 500;
 
         @media (max-width: $small-screen) {
           display: none;
@@ -50,13 +51,34 @@
     .nav-items {
       position: absolute;
       right: 20px;
+      top: 20px;
 
       i {
         font-size: 60px;
       }
 
       .icon {
-        font-size: 120px;
+        font-size: 70px;
+        font-weight: 100;
+      }
+
+      ul {
+        li {
+          display: inline;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: white;
+          font-weight: 600;
+          text-shadow: $shadow;
+
+          &:first-child {
+            margin-right: 20px;
+
+            @media (max-width: $small-screen) {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

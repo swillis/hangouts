@@ -5,6 +5,10 @@
   height: 80%;
   bottom: -80%;
   @include transition( bottom, 0.3s );
+  @media (max-width: $small-screen) {
+    height: 87%;
+    bottom: -90%;
+  }
 
   .modal {
     position: relative;
@@ -43,11 +47,9 @@
       }
 
       .close-button {
-
         i {
           font-size: 60px;
         }
-
       }
     }
 
@@ -62,6 +64,7 @@
         font-size: 40px;
         margin-bottom: 10px;
         color: $link-color;
+        letter-spacing: 1px;
       }
     }
 
@@ -82,8 +85,12 @@
 
 .description {
 
+  .heading {
+    border-bottom: none !important;
+    padding: 40px 40px 50px !important;
+
     .profile-image {
-      float: left;
+      margin: 0 auto;
       height: 170px;
       width: 170px;
       overflow: hidden;
@@ -94,69 +101,81 @@
         height: 100%;
       }
 
-      @media (max-width: $small-screen) {
-        display: none;
-      }
+      // @media (max-width: $small-screen) {
+      //   height: 140px;
+      //   width: 140px;
+      // }
     }
 
-    .heading {
-      // margin: 0 auto;
+    .venue-address {
+      margin-top: 20px;
+      text-align: center;
 
-      .center-heading {
-        display: table;
-        margin: 0 auto;
+      h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $brand-color;
+        font-weight: 500;
+        margin-bottom: 3px;
       }
 
-      .venue-address {
-        margin-top: 50px;
-        float: left;
-        padding-left: 40px;
+      h2 {
+        font-size: 18px;
+      }
 
-        h1 {
-          font-size: 24px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          color: $brand-color;
-          font-weight: 500;
-          margin-bottom: 3px;
+      h3 {
+        font-size: 18px;
+        color: $link-color;
+        margin-bottom: 20px;
+      }
+
+      a {
+        background: $link-color;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: 600;
+
+        i {
+          margin-right: 10px;
         }
 
-        h2 {
-          font-size: 18px;
+        &:hover {
+          background: darken($link-color, 20%);
         }
+      }
 
-        h3 {
-          font-size: 18px;
-          color: $link-color;
-        }
-
-        @media (max-width: $small-screen) {
-          margin: 0;
-          padding: 0;
-        }
+      a.selected {
+        background: #e23e32;
       }
     }
+  }
 
   .venue-details {
-    display: block;
+    display: table;
     clear: both;
     width: 100%;
 
     .detail {
       padding: 20px 0;
       text-align: center;
-      width: 25%;
+      width: 33.33%;
       float: left;
       overflow: hidden;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      background: $link-color;
+      color: #fff;
 
       @media (max-width: $small-screen) {
         width: 100%;
-        border-top: 1px solid $link-color;
+        border-bottom: 2px solid #fff;
       }
 
     &:hover {
-      background: $link-color;
-      color: #fff;
+      background: #fff;
+      color: $link-color;
     }
 
       i {
@@ -165,15 +184,14 @@
 
       p {
         padding-top: 5px;
+        font-weight: 500;
+        font-size: 18px;
       }
     }
   }
 
   .map {
-    // position: absolute;
     width: 100%;
-    // height: 150px;
-    bottom: 0
   }
 }
 
@@ -299,6 +317,88 @@
 
   .contact-form {
     text-align: center;
+    position: relative;
+
+    .venue-profile {
+      height: 120px;
+      width: 120px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 3px solid $link-color;
+      margin: 0 auto 10px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: $link-color;
+
+      span {
+        color: $brand-color;
+      }
+    }
+
+    .context {
+      margin: 0 auto;
+      display: table;
+      width: 100%;
+      max-width: 600px;
+
+      .option {
+        float: left;
+        width: 32%;
+        border: 2px solid $link-color;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-right: 2%;
+
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+
+        i, p {
+          display: inline;
+        }
+
+        i {
+          margin-right: 5px;
+        }
+
+        p {
+          font-weight: 600;
+        }
+
+        &:hover {
+          background: $link-color;
+          color: #fff;
+
+          a {
+            // color: #fff;
+          }
+        }
+
+        @media (max-width: $small-screen) {
+          p {
+            display: none;
+          }
+
+          i {
+            margin: 0;
+          }
+        }
+      }
+
+      .selected {
+        border-color: darken($link-color, 20%);
+        background: darken($link-color, 20%) !important;
+        color: white;
+      }
+    }
 
     input,
     textarea {
@@ -318,7 +418,7 @@
     textarea,
     input {
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
       margin: 10px auto;
     }
 
@@ -327,9 +427,27 @@
       padding: 15px;
       background: $link-color;
       cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
 
       &:hover {
         background: darken($link-color, 20%);
+      }
+    }
+  }
+
+  .contact-hangouts {
+    text-align: center;
+    margin-bottom: 10px;
+    color: $link-color;
+    font-weight: 500;
+    font-size: 14px;
+
+    a {
+      color: $brand-color;
+
+      &:hover {
+        border-bottom: 1px solid $brand-color;
       }
     }
   }
@@ -355,20 +473,24 @@
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1px;
-        padding: 20px;
+        padding: 15px;
 
         a {
-          color: rgba(0,0,0,0.2);
+          color: #fff;
+
+          i {
+            font-size: 60px;
+          }
         }
 
         .medium {
           position: absolute;
-          top: 20px;
-          right: 20px;
+          top: 15px;
+          right: 15px;
 
           .icon {
-            font-size: 40px;
-            color: rgba(0,0,0,0.2);
+            font-size: 60px;
+            color: #fff;
           }
         }
       }
@@ -385,9 +507,25 @@
 
       .copy {
         padding: 20px;
-        font-weight: 300;
-        background: rgba(0,0,0,0.05);
-        color: #fff;
+        font-weight: 500;
+        background: rgba(255,255,255,0.2);
+        color: rgba(0,0,0,0.5);
+      }
+
+      .timestamp {
+        // text-align: center;
+        padding: 7px;
+        font-weight: 700;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+
+        i {
+          // padding-right: 5px;
+          font-weight: 500;
+          font-size: 30px;
+        }
       }
     }
 
