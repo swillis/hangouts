@@ -31,29 +31,34 @@
       font-weight: 500;
     }
 
-    input {
+    .login {
       display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      min-width: 230px;
-      margin-bottom: 10px;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
-      font-size: 14px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      width: 250px;
+      margin: 10px auto;
 
-      &[type=text] {
-        border: 2px solid $link-color;
+      i {
+        padding-right: 10px;
       }
+    }
 
-      &[type=submit] {
-        border: none;
-        background: $link-color;
-        color: #fff;
-        cursor: pointer;
+    .facebook {
+      background: #3b5998;
 
-        &:hover {
-          background: $brand-color;
-        }
+      &:hover {
+        background: lighten(#3b5998, 10%);
+      }
+    }
+
+    .email {
+      background: $link-color;
+
+      &:hover {
+        background: lighten($link-color, 10%);
       }
     }
 
@@ -66,11 +71,54 @@
         font-size: 60px;
       }
     }
+
+    .signed-up {
+
+      a {
+        color: $brand-color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .options {
+    display: none;
+  }
+
+  .sign-up-form {
+    display: none;
+    input {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+
+      &[type=text] {
+        border-radius: 5px;
+        border: 2px solid $link-color;
+      }
+
+      &[type=submit] {
+        background: $brand-color;
+        color: white;
+
+        &:hover {
+          background: lighten($brand-color, 10%);
+        }
+      }
+    }
+  }
+  .show {
+    display: block;
   }
 }
 
 .visible {
   opacity: 1;
   z-index: 9999;
-  // @include transition(all, 0.5s);
 }
