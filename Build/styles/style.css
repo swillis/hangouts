@@ -317,7 +317,8 @@ a {
       top: 10px;
       right: 10px;
       font-weight: 500;
-      font-size: 16px; }
+      font-size: 16px;
+      z-index: 9999; }
       .flyout .modal .corner-buttons a:hover {
         color: #304154; }
       .flyout .modal .corner-buttons .like-button {
@@ -378,17 +379,18 @@ a {
     .description .heading .venue-address h3 {
       font-size: 18px;
       color: #b1c0d2;
-      margin-bottom: 20px; }
+      margin-bottom: 35px; }
     .description .heading .venue-address a {
-      background: #b1c0d2;
+      background: #25c35f;
       color: white;
       border-radius: 5px;
       padding: 10px 20px;
-      font-weight: 600; }
+      font-weight: 600;
+      font-size: 20px; }
       .description .heading .venue-address a i {
         margin-right: 10px; }
       .description .heading .venue-address a:hover {
-        background: #708cad; }
+        background: #40db79; }
     .description .heading .venue-address a.selected {
       background: #e23e32; }
 .description .venue-details {
@@ -396,30 +398,82 @@ a {
   clear: both;
   width: 100%; }
   .description .venue-details .detail {
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     width: 33.33%;
     float: left;
     overflow: hidden;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    background: #b1c0d2;
-    color: white; }
+    background: #47576a;
+    color: white;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    transition: all, 0.3s; }
     @media (max-width: 640px) {
       .description .venue-details .detail {
         width: 100%;
         border-bottom: 2px solid white; } }
     .description .venue-details .detail:hover {
-      background: white;
-      color: #b1c0d2; }
+      background: #5b7089; }
     .description .venue-details .detail i {
-      font-size: 60px; }
+      font-size: 50px; }
     .description .venue-details .detail p {
       padding-top: 5px;
       font-weight: 500;
       font-size: 18px; }
 .description .map {
-  width: 100%; }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 200px; }
+  .description .map iframe, .description .map embed, .description .map object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+.description .extra-details {
+  position: relative;
+  height: 45px; }
+  .description .extra-details .drawer {
+    bottom: 0;
+    position: absolute;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    background: #47576a;
+    border-top: 5px solid #323e4c;
+    cursor: pointer;
+    color: white; }
+    .description .extra-details .drawer span {
+      font-weight: 900; }
+    .description .extra-details .drawer:hover {
+      background: #5b7089;
+      border-color: #25c35f; }
+    .description .extra-details .drawer a {
+      color: white;
+      font-weight: 900; }
+    .description .extra-details .drawer i {
+      padding-right: 10px;
+      font-weight: 100; }
+    .description .extra-details .drawer ul {
+      display: none; }
+      .description .extra-details .drawer ul li {
+        padding: 5px 0; }
+        .description .extra-details .drawer ul li a:hover {
+          border-bottom: 2px solid white; }
+    .description .extra-details .drawer .open {
+      display: block;
+      margin-top: 10px; }
+  .description .extra-details .openings {
+    left: 0; }
+  .description .extra-details .menus {
+    right: 0; }
+.description .content h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b1c0d2;
+  margin-bottom: 10px; }
 
 .gallery .exhibit {
   display: table;
@@ -489,18 +543,18 @@ a {
   text-align: center;
   position: relative; }
   .contact .contact-form .venue-profile {
-    height: 120px;
-    width: 120px;
+    height: 170px;
+    width: 170px;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid #b1c0d2;
-    margin: 0 auto 10px; }
+    border: 5px solid #25c35f;
+    margin: 0 auto 15px; }
     .contact .contact-form .venue-profile img {
       height: 100%; }
   .contact .contact-form h2 {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
     color: #b1c0d2; }
     .contact .contact-form h2 span {
       color: #25c35f; }
@@ -655,30 +709,58 @@ a {
       margin-bottom: 20px;
       color: #25c35f;
       font-weight: 500; }
-    .overlay .sign-in-module input {
+    .overlay .sign-in-module .login {
       display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      min-width: 230px;
-      margin-bottom: 10px;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
-      font-size: 14px; }
-      .overlay .sign-in-module input[type=text] {
-        border: 2px solid #b1c0d2; }
-      .overlay .sign-in-module input[type=submit] {
-        border: none;
-        background: #b1c0d2;
-        color: white;
-        cursor: pointer; }
-        .overlay .sign-in-module input[type=submit]:hover {
-          background: #25c35f; }
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      width: 250px;
+      margin: 10px auto; }
+      .overlay .sign-in-module .login i {
+        padding-right: 10px; }
+    .overlay .sign-in-module .facebook {
+      background: #3b5998; }
+      .overlay .sign-in-module .facebook:hover {
+        background: #4c71ba; }
+    .overlay .sign-in-module .email {
+      background: #b1c0d2; }
+      .overlay .sign-in-module .email:hover {
+        background: #d1dae5; }
     .overlay .sign-in-module .sign-in-close {
       position: absolute;
       top: 7px;
       right: 10px; }
       .overlay .sign-in-module .sign-in-close .icon {
         font-size: 60px; }
+    .overlay .sign-in-module .signed-up a {
+      color: #25c35f;
+      font-weight: 500; }
+  .overlay .options {
+    display: none; }
+  .overlay .sign-up-form {
+    display: none; }
+    .overlay .sign-up-form input {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px; }
+      .overlay .sign-up-form input[type=text] {
+        border-radius: 5px;
+        border: 2px solid #b1c0d2; }
+      .overlay .sign-up-form input[type=submit] {
+        background: #25c35f;
+        color: white; }
+        .overlay .sign-up-form input[type=submit]:hover {
+          background: #40db79; }
+  .overlay .show {
+    display: block; }
 
 .visible {
   opacity: 1;

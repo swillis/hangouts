@@ -4,9 +4,7 @@
     <title>Hangout at The Botanist, Chelsea</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="stylesheet" type="text/css" href="styles/vendor/reset.css">
     <link href="styles/vendor/lightbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
@@ -22,16 +20,22 @@
   <body>
 
     <!-- sign in module -->
-    <div class='overlay'>
+    <div class='overlay sign-in'>
       <div class='sign-in-module'>
-        <a href="#" class='sign-in-close'><i class='icon'>&#10060;</i></a>
-        <h2>Sign in</h2>
-        <input class='small name' type="text" name="Username" value="" placeholder='Username'>
-        <input class='small name' type="text" name="Password" value="" placeholder='Password'>
-        <input class='submit-form' type="submit" value="Submit">
-        <a href="#">Forgotten your password?</a>
-        <br>
-        <a href="#">Register</a>
+        <div class='options show'>
+          <a href="#" class='sign-in-close'><i class='icon'>&#10060;</i></a>
+          <h2>Sign in</h2>
+          <a class='facebook login' href="#"><i class='icon'>&#62220;</i> Sign up with Facebook</a>
+          <a class='email login' href="#"><i class='icon'>&#9993;</i> Sign up with Email</a>
+          <p class='signed-up'>Already have an account? <a href="#">Log in here</a>.</p>
+        </div>
+        <div class='sign-up-form'>
+          <h2>Get signed up</h2>
+          <input type='text' placeholder='Name'>
+          <input type='text' placeholder='Email'>
+          <input type='text' placeholder='Password'>
+          <input type='submit'>
+        </div>
       </div>
     </div>
 
@@ -57,8 +61,6 @@
           </div>
         </nav>
       </div>
-
-    
 
 
       <!-- title -->
@@ -111,11 +113,27 @@
             </div>
           </div>
           <div class='extra-details'>
-            <div class='opening-times'></div>
-            <div class='menus'></div>
+
+              <article class='drawer openings'>
+                <a href='#'><i class='icon'>&#128197;</i> Open til 22:00</a>
+                <ul>
+                  <li><span>Mon-Fri:</span> 09:00 - 22:00</li>
+                  <li><span>Sat:</span> 09:00 - 00:00</li>
+                  <li><span>Sun:</span> 10:00 - 20:00</li>
+                </ul>
+              </article>
+
+              <article class='drawer menus'>
+                <a href='#'><i class='icon'>&#128196;</i> Menus</a>
+                <ul>
+                  <li><a href="#">A la Carte</a></li>
+                  <li><a href="#">Wine list</a></li>
+                </ul>
+              </article>
+
           </div>
           <div class='map'>
-            <iframe width='100%' height='200px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/thesamwillis.geog1460/mm/index.html?secure=1#16/51.4927/-0.1571'></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2484.1160716718778!2d-0.15791153757324203!3d51.49273744195898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605163daa3ead%3A0x443299f8a2118322!2sthe+botabist+chelsea!5e0!3m2!1sen!2suk!4v1387661499204" width="800" height="600" frameborder="0" style="border:0"></iframe>
           </div>
           <div class='venue-details'>
             <a href="#">
@@ -139,6 +157,7 @@
           </div>
           <!-- content -->
           <div class='content'>
+            <h2>Description</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
         </div>
@@ -385,10 +404,10 @@
             <a href="#" class='close-button'><i class='icon'>&#10060;</i></a>
           </div>
           <!-- header -->
-          <div class='heading'>
+          <!-- <div class='heading'>
             <h1>Get in touch</h1>
             <p>Your feedback is extremely valuable. Help us make a better experience for you.</p>
-          </div>
+          </div> -->
           <!-- content -->
           <div class='content contact-form'>
             <div class='venue-profile'>

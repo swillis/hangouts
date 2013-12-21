@@ -49,10 +49,10 @@ $(window).resize(function() {
 // sign in
 
 $('body').on('click', '.sign-in', function() {
-  $('.overlay').addClass('visible');
+  $('.overlay.sign-in').addClass('visible');
 })
 
-$('body').on('click', '.overlay', function() {
+$('body').on('click', '.overlay.sign-in', function() {
   var checkVisibility = $(this).hasClass('visible');
   if (checkVisibility == true) {
     $(this).removeClass('visible');
@@ -60,17 +60,17 @@ $('body').on('click', '.overlay', function() {
 });
 
 $('.sign-in-close').click(function() {
-  $('.overlay').removeClass('visible');
+  $('.overlay.sign-in').removeClass('visible');
 })
 
 $('.sign-in-module').click(function(event){
     event.stopPropagation();
 });
 
-$('.submit-form').click(function() {
+$('.login').click(function() {
   $('.sign-in').hide();
   $('.log-out').show();
-  $('.overlay').removeClass('visible');
+  $('.overlay.sign-in').removeClass('visible');
 })
 
 $('body').on('click', '.log-out', function() {
@@ -111,6 +111,10 @@ $('body').on('click', '.sidebar-name', function() {
   }
   $('.flyout.description').toggleClass( "visible" );
   $(this).toggleClass('active' );
+})
+
+$('body').on('click', '.drawer', function() {
+  $(this).find('ul').toggleClass('open');
 })
 
 // newsfeeds
