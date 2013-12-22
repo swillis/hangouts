@@ -182,18 +182,46 @@ $('body').on('click', '.sidebar-like, .like-button', function() {
 })
 
 
-// masonry
+// masonry - newsfeed
 
 $(document).ready(function() {
 
   // Initialize Masonry
   $('#newsfeed').masonry({
-    columnWidth: $('#newsfeed').width()/3,
+    columnWidth: 290,
     itemSelector: '.item',
-    "gutter": 10,
-    // isFitWidth: true,
+    isFitWidth: true,
     isAnimated: !Modernizr.csstransitions
   }).imagesLoaded(function() {
     $(this).masonry('reload');
   });
 });
+
+
+// masonry - gallery
+
+$(document).ready(function() {
+
+  // Initialize Masonry
+  $('#exhibition').masonry({
+    columnWidth: 290,
+    itemSelector: '.item',
+    isFitWidth: true,
+    isAnimated: !Modernizr.csstransitions
+  }).imagesLoaded(function() {
+    $(this).masonry('reload');
+  });
+
+});
+
+
+// mobile - show description
+
+  setInterval(function() {  
+    if ( $(window).width() < 640) { 
+      $('.description').addClass('visible');  
+    }
+    else {   
+      $('.description').removeClass('visible');  
+    }
+  }, 3500)
