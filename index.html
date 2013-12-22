@@ -178,6 +178,24 @@
           <div class='content feed'>
 
             <div id="newsfeed" class="container clearfix">
+
+              <article class="item twitter large">
+                <div class='head'>
+                  <a href="#"><i class='icon'>&#62217;</i></a>
+                  <div class='medium'><i class='icon'>&#128247;</i></div>
+                </div>
+                <div class='social-content'>
+                  <img src="images/botanist-home.jpg">
+                </div>
+                <div class='copy'>
+                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
+                </div>
+
+                <div class='timestamp'>
+                  <p><i class='icon'>&#128340;</i> 55 minutes ago</p>
+                </div>
+
+              </article>
               
               <article class="item facebook">
                 <div class='head'>
@@ -227,24 +245,6 @@
 
                 <div class='timestamp'>
                   <p><i class='icon'>&#128340;</i> 50 minutes ago</p>
-                </div>
-
-              </article>
-              
-              <article class="item twitter large">
-                <div class='head'>
-                  <a href="#"><i class='icon'>&#62217;</i></a>
-                  <div class='medium'><i class='icon'>&#128247;</i></div>
-                </div>
-                <div class='social-content'>
-                  <img src="images/botanist-home.jpg">
-                </div>
-                <div class='copy'>
-                  <p>Lots of lovely copy describing the piece of content featured in this article.</p>
-                </div>
-
-                <div class='timestamp'>
-                  <p><i class='icon'>&#128340;</i> 55 minutes ago</p>
                 </div>
 
               </article>
@@ -306,48 +306,48 @@
           <!-- header -->
           <div class='heading'>
             <h1>Gallery</h1>
+            <p>Browse our collection of images from <span>The Botanist</span>. Click the images to enlarge.</p>
           </div>
           <!-- content -->
           <div class='content'>
-
-            <div class='exhibit'>
-              <div class='feature'>
-                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-home.jpg"></a>
+            <div id="exhibition">
+              <div class='item'>
+                <a href="images/botanist-dinner.jpg" data-lightbox="The Botanist home" title="The Botanist at dusk."><img src="images/botanist-dinner.jpg"></a>
+                <div class='social'>
+                  <p>Share: </p>
+                  <a href="#"><i class='icon'>&#62220;</i></a>
+                  <a href="#"><i class='icon'>&#62217;</i></a>
+                  <a href="#"><i class='icon'>&#62223;</i></a>
+                </div>
               </div>
-              <div class='aside'>
-                <h2>The Botanist at dusk</h2>
-                <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#62220;</i></a>
-                <a href="#"><i class='icon'>&#62217;</i></a>
-                <a href="#"><i class='icon'>&#62223;</i></a>
-
+              <div class='item'>
+                <a href="images/botanist-drink.jpg" data-lightbox="The Botanist home" title="The Botanist at dusk."><img src="images/botanist-drink.jpg"></a>
+                <div class='social'>
+                  <p>Share: </p>
+                  <a href="#"><i class='icon'>&#62220;</i></a>
+                  <a href="#"><i class='icon'>&#62217;</i></a>
+                  <a href="#"><i class='icon'>&#62223;</i></a>
+                </div>
+              </div>
+              <div class='item'>
+                <a href="images/botanist-inside-wall.jpg" data-lightbox="The Botanist home" title="The Botanist at dusk."><img src="images/botanist-inside-wall.jpg"></a>
+                <div class='social'>
+                  <p>Share: </p>
+                  <a href="#"><i class='icon'>&#62220;</i></a>
+                  <a href="#"><i class='icon'>&#62217;</i></a>
+                  <a href="#"><i class='icon'>&#62223;</i></a>
+                </div>
+              </div>
+              <div class='item'>
+                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist at dusk."><img src="images/botanist-home.jpg"></a>
+                <div class='social'>
+                  <p>Share: </p>
+                  <a href="#"><i class='icon'>&#62220;</i></a>
+                  <a href="#"><i class='icon'>&#62217;</i></a>
+                  <a href="#"><i class='icon'>&#62223;</i></a>
+                </div>
               </div>
             </div>
-
-            <div class='exhibit'>
-              <div class='feature'>
-                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-cocktail.jpg"alt="Cocktail"></a>
-              </div>
-              <div class='aside'>
-                <h2>The Botanist at dusk</h2>
-                <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#62220;</i></a>
-                <a href="#"><i class='icon'>&#62217;</i></a>
-              </div>
-            </div>
-
-            <div class='exhibit'>
-              <div class='feature'>
-                <a href="images/botanist-home.jpg" data-lightbox="The Botanist home" title="The Botanist ast dusk."><img src="images/botanist-dinner.jpg" alt="Dinner"></a>
-              </div>
-              <div class='aside'>
-                <h2>The Botanist at dusk</h2>
-                <p>This is a short summary of the photograph.</p>
-                <a href="#"><i class='icon'>&#62220;</i></a>
-                <a href="#"><i class='icon'>&#62217;</i></a>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -447,9 +447,6 @@
             <li><a href="#" class='log-out'><i class='icon'>&#128640;</i>Log out</a></li>
           </ul>
           <p class='legal'>Powered by <a href="#">Hangout.at</a>. All rights reserved.</p>
-<!--           <ul class='sidebar-foot'>
-            <li><a href="#"><i class='icon'>&#128640;</i>Log out</a></li>
-          </ul> -->
         </div>
       </div>
     </div>
@@ -463,7 +460,7 @@
     <script>
       $('#slides').superslides({
         animation: 'fade',
-        // play: 8000
+        play: 9000
       });
     </script>
   	<script src='javascripts/snap.min.js'></script>

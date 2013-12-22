@@ -475,42 +475,38 @@ a {
   color: #b1c0d2;
   margin-bottom: 10px; }
 
-.gallery .exhibit {
-  display: table;
-  clear: both;
-  padding: 20px 0;
-  border-bottom: 2px dashed #ededed; }
-  .gallery .exhibit .feature {
-    min-width: 240px;
-    max-width: 70%;
-    border: 5px solid #ededed;
-    float: left; }
-    .gallery .exhibit .feature img {
-      width: 100%; }
-.gallery .aside {
-  float: left;
-  min-width: 150px;
-  max-width: 30%;
-  padding: 0 20px;
-  padding: 10px;
-  background: #ededed; }
+.gallery #exhibition .item {
+  max-width: 280px;
+  margin-bottom: 10px;
+  background: #1e252d;
+  overflow: hidden; }
   @media (max-width: 640px) {
-    .gallery .aside {
-      padding: 10px; } }
-  .gallery .aside h2 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #25c35f;
-    margin-bottom: 3px; }
-  .gallery .aside p {
-    margin-bottom: 10px; }
-  .gallery .aside a {
-    display: inline;
-    padding: 10px 10px 0 0; }
-    .gallery .aside a:hover {
-      color: #304154; }
-    .gallery .aside a i {
-      font-size: 50px; }
+    .gallery #exhibition .item {
+      max-width: 240px; } }
+  .gallery #exhibition .item img {
+    width: 100%;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    transition: all, 0.3s; }
+  .gallery #exhibition .item .social {
+    padding: 10px;
+    background: #1e252d;
+    color: #b1c0d2;
+    text-align: right;
+    position: relative; }
+    .gallery #exhibition .item .social p {
+      position: absolute;
+      left: 15px;
+      display: inline;
+      font-weight: 500; }
+    .gallery #exhibition .item .social i {
+      font-size: 50px;
+      padding: 0 5px;
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      transition: all, 0.3s; }
+      .gallery #exhibition .item .social i:hover {
+        color: #25c35f; }
 
 .share .content {
   display: table;
@@ -627,12 +623,11 @@ a {
   max-width: 103.125%;
   margin-left: 2%; }
   .news #newsfeed .item {
-    background-color: #ededed;
-    max-width: 31%;
+    max-width: 280px;
     min-width: 250px;
     margin: 0 auto;
     float: left;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
     border-radius: 5px; }
     .news #newsfeed .item .head {
       position: relative;
@@ -679,7 +674,7 @@ a {
   .news #newsfeed .vine {
     background: #00b386; }
   .news #newsfeed .large {
-    max-width: 65%; }
+    max-width: 570px; }
 
 .overlay {
   opacity: 0;

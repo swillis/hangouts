@@ -278,57 +278,46 @@
 
 .gallery {
 
-  .exhibit {
-    display: table;
-    clear: both;
-    padding: 20px 0;
-    border-bottom: 2px dashed #ededed;
+  #exhibition {
 
-    .feature {
-      min-width: 240px;
-      max-width: 70%;
-      border: 5px solid #ededed;
-      float: left;
+    .item {
+      max-width: 280px;
+      margin-bottom: 10px;
+      background: $base-color;
+      overflow: hidden;
+
+      @media (max-width: $small-screen) {
+        max-width: 240px;
+      }
 
       img {
         width: 100%;
-      }
-    }
-  }
-
-  .aside {
-    float: left;
-    min-width: 150px;
-    max-width: 30%;
-    padding: 0 20px;
-    padding: 10px;
-    background: #ededed;
-
-    @media (max-width: $small-screen) {
-      padding: 10px;
-    }
-
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-      color: $brand-color;
-      margin-bottom: 3px;
-    }
-
-    p {
-      margin-bottom: 10px;
-    }
-
-    a {
-      display: inline;
-      padding: 10px 10px 0 0;
-
-      &:hover {
-        color: darken($link-color, 50%)
+        @include transition(all,0.3s);
       }
 
-      i {
-        font-size: 50px;
+      .social {
+        padding: 10px;
+        background: $base-color;
+        color: $link-color;
+        text-align: right;
+        position: relative;
+
+        p {
+          position: absolute;
+          left: 15px;
+          display: inline;
+          font-weight: 500;
+        }
+
+        i {
+          font-size: 50px;
+          padding: 0 5px;
+          @include transition(all,0.3s);
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
       }
     }
   }
@@ -541,12 +530,11 @@
     margin-left: 2%;
 
     .item {
-      background-color: #ededed;
-      max-width: 31%;
+      max-width: 280px;
       min-width: 250px;
       margin: 0 auto;
       float: left;
-      margin: 0 auto 20px;
+      margin: 0 auto 10px;
       border-radius: 5px;
 
       .head {
@@ -627,7 +615,7 @@
     }
 
     .large {
-      max-width: 65%;
+      max-width: 570px;
     }
   }
 }
