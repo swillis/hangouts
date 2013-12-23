@@ -9,16 +9,12 @@ body {
 }
 
 input,
-textarea {
+textarea,
+button {
   outline: none;
   font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: #666;
-
-  &:focus {
-    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.2);
-    background: rgba(0,0,0,0.05);
-  }
 }
 
 a {
