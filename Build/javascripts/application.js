@@ -217,11 +217,11 @@ $(document).ready(function() {
 
 // mobile - show description
 
-  setInterval(function() {  
-    if ( $(window).width() < 640) { 
-      $('.description').addClass('visible');  
-    }
-    else {   
-      $('.description').removeClass('visible');  
-    }
-  }, 3500)
+$(function() {
+  if ( $(window).width() < 640) { 
+    $('body').delay(3500).queue(function() {$('.description').addClass('visible')});
+  }
+  else {
+    return false;
+  }
+})
