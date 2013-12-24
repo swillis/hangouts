@@ -29,15 +29,15 @@
     position: absolute;
     display: block;
     &.prev {
-      left: 20px;
+      left: 10px;
     }
     &.next {
-      right: 20px;
+      right: 10px;
     }
-    i {
+    i:before {
       color: #fff;
       text-shadow: $shadow;
-      font-size: 70px;
+      font-size: 40px;
     }
   }
 }

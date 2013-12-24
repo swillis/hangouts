@@ -53,13 +53,10 @@
       right: 20px;
       top: 20px;
 
-      i {
-        font-size: 60px;
-      }
-
-      .icon {
-        font-size: 70px;
-        font-weight: 100;
+      .icon-menu:before,
+      .icon-cancel:before {
+        font-size: 40px !important;
+        vertical-align: sub;
       }
 
       ul {

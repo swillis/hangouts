@@ -48,8 +48,9 @@
       }
 
       .close-button {
-        i {
-          font-size: 60px;
+        i:before {
+          font-size: 40px;
+          vertical-align: sub;
         }
       }
     }
@@ -309,8 +310,8 @@
           font-weight: 500;
         }
 
-        i {
-          font-size: 50px;
+        i:before {
+          vertical-align: sub;
           padding: 0 5px;
           @include transition(all,0.3s);
 
@@ -340,9 +341,10 @@
       @include transition(all, 0.3s);
     }
 
-    i {
+    i:before {
+      margin: 0 auto;
       display: block;
-      font-size: 110px;
+      font-size: 80px;
       padding: 20px;
     }
   }
