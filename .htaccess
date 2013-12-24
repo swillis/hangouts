@@ -1,0 +1,5 @@
+svg  as "image/svg+xml"
+ttf  as "application/x-font-ttf"
+otf  as "application/x-font-opentype"
+woff as "application/font-woff"
+eof  as "application/vnd.ms-fontobject"
