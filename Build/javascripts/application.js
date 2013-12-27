@@ -67,10 +67,14 @@ $('.sign-in-module').click(function(event){
     event.stopPropagation();
 });
 
-$('.login').click(function() {
+$('.facebook.login, .register').click(function() {
   $('.sign-in').hide();
   $('.log-out').show();
   $('.overlay.sign-in').removeClass('visible');
+})
+
+$('.email.login').click(function() {
+  $('.sign-up-form').toggleClass('show');
 })
 
 $('body').on('click', '.log-out', function() {

@@ -37,6 +37,10 @@
       .like-button {
         margin-right: 10px;
 
+        @media (max-width: $small-screen) {
+          margin: 0;
+        }
+
         span {
 
           margin-left: 5px;
@@ -49,7 +53,7 @@
 
       .close-button {
         i:before {
-          font-size: 40px;
+          font-size: 30px;
           vertical-align: sub;
         }
       }
