@@ -14,9 +14,12 @@
         padding: 20px;
         @include transition(all, 0.3s);
 
-        &:hover {
-          background: lighten($base-color, 5%);
-          border-right: 5px solid $brand-color;
+        @media (min-width: $small-screen) {
+
+          &:hover {
+            background: lighten($base-color, 5%);
+            border-right: 5px solid $brand-color;
+          }
         }
       }
 
