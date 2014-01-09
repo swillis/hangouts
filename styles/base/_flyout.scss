@@ -18,7 +18,7 @@
 
     max-width: 960px;
     border-top: 5px solid $brand-color;
-    overflow: scroll;
+    overflow-y: scroll;
 
     .corner-buttons {
       position: absolute;
@@ -71,6 +71,17 @@
         margin-bottom: 10px;
         color: $link-color;
         letter-spacing: 1px;
+
+        @media (max-width: $small-screen) {
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        
+        @media (max-width: $small-screen) {
+          display: none;
+        }
       }
     }
 
@@ -105,6 +116,12 @@
       overflow: hidden;
       border-radius: 50%;
       border: 5px solid $brand-color;
+
+      @media (max-width: $small-screen) {
+        height: 100px;
+        width: 100px;
+        border-width: 3px;
+      }
 
       img {
         height: 100%;
@@ -352,7 +369,7 @@
       margin: 0 auto;
       display: block;
       font-size: 80px;
-      padding: 20px;
+      padding-bottom: 20px;
     }
   }
 
@@ -406,6 +423,10 @@
       border: 5px solid $brand-color;
       margin: 0 auto 15px;
 
+      @media (max-width: $small-screen) {
+        display: none;
+      }
+
       img {
         height: 100%;
       }
@@ -416,6 +437,10 @@
       font-weight: 500;
       margin-bottom: 25px;
       color: $link-color;
+
+      @media (max-width: $small-screen) {
+        margin: 25px 0 20px;
+      }
 
       span {
         color: $brand-color;

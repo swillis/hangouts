@@ -144,7 +144,8 @@ a {
 #content {
   background: white;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .like {
   color: #b1c0d2; }
@@ -187,58 +188,56 @@ a {
   box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.2); }
 
 .navigation {
-  position: fixed;
+  position: absolute;
   height: 50px;
   z-index: 9999;
-  width: 100%; }
-  .navigation nav {
-    position: relative;
-    width: 100%; }
-    .navigation nav a {
-      color: white; }
-    .navigation nav .logo {
-      top: 20px;
-      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-      position: absolute;
-      left: 20px;
-      max-width: 70%; }
-      .navigation nav .logo a {
-        font-size: 24px;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 2px; }
-      .navigation nav .logo .venue-title {
-        color: #25c35f;
-        font-weight: 600; }
-        @media (max-width: 640px) {
-          .navigation nav .logo .venue-title {
-            color: white;
-            font-weight: 600;
-            font-size: 20px;
-            width: 50%; } }
-      .navigation nav .logo .platform-title {
-        text-transform: none;
-        font-weight: 500; }
-        @media (max-width: 640px) {
-          .navigation nav .logo .platform-title {
-            display: none; } }
-    .navigation nav .nav-items {
-      position: absolute;
-      right: 17px;
-      top: 13px; }
-      .navigation nav .nav-items .icon-menu:before, .navigation nav .nav-items .icon-cancel:before {
-        font-size: 37px !important;
-        vertical-align: sub; }
-      .navigation nav .nav-items ul li {
-        display: inline;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: white;
-        font-weight: 600;
-        text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
-        @media (max-width: 640px) {
-          .navigation nav .nav-items ul li:first-child {
-            display: none; } }
+  width: 100%;
+  top: 0; }
+  .navigation a {
+    color: white; }
+  .navigation .logo {
+    top: 20px;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 20px;
+    max-width: 70%; }
+    .navigation .logo a {
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .navigation .logo .venue-title {
+      color: #25c35f;
+      font-weight: 600; }
+      @media (max-width: 640px) {
+        .navigation .logo .venue-title {
+          color: white;
+          font-weight: 900;
+          font-size: 16px;
+          width: 50%; } }
+    .navigation .logo .platform-title {
+      text-transform: none;
+      font-weight: 500; }
+      @media (max-width: 640px) {
+        .navigation .logo .platform-title {
+          display: none; } }
+  .navigation .nav-items {
+    position: absolute;
+    right: 17px;
+    top: 13px; }
+    .navigation .nav-items .icon-menu:before, .navigation .nav-items .icon-cancel:before {
+      font-size: 37px !important;
+      vertical-align: sub; }
+    .navigation .nav-items ul li {
+      display: inline;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      font-weight: 600;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
+      @media (max-width: 640px) {
+        .navigation .nav-items ul li:first-child {
+          display: none; } }
 
 .sidebar {
   background: #1e252d;
@@ -289,7 +288,7 @@ a {
     max-height: 100%;
     max-width: 960px;
     border-top: 5px solid #25c35f;
-    overflow: scroll; }
+    overflow-y: scroll; }
     .flyout .modal .corner-buttons {
       position: absolute;
       top: 10px;
@@ -323,6 +322,12 @@ a {
         margin-bottom: 10px;
         color: #b1c0d2;
         letter-spacing: 1px; }
+        @media (max-width: 640px) {
+          .flyout .modal .heading h1 {
+            margin-bottom: 0; } }
+      @media (max-width: 640px) {
+        .flyout .modal .heading p {
+          display: none; } }
     .flyout .modal .content {
       padding: 30px 40px 40px; }
       @media (max-width: 640px) {
@@ -346,6 +351,11 @@ a {
     overflow: hidden;
     border-radius: 50%;
     border: 5px solid #25c35f; }
+    @media (max-width: 640px) {
+      .description .heading .profile-image {
+        height: 100px;
+        width: 100px;
+        border-width: 3px; } }
     .description .heading .profile-image img {
       height: 100%; }
   .description .heading .venue-address {
@@ -509,7 +519,7 @@ a {
     margin: 0 auto;
     display: block;
     font-size: 80px;
-    padding: 20px; }
+    padding-bottom: 20px; }
 .share .facebook:hover a {
   color: #3b5998; }
 .share .twitter:hover a {
@@ -531,6 +541,9 @@ a {
     border-radius: 50%;
     border: 5px solid #25c35f;
     margin: 0 auto 15px; }
+    @media (max-width: 640px) {
+      .contact .contact-form .venue-profile {
+        display: none; } }
     .contact .contact-form .venue-profile img {
       height: 100%; }
   .contact .contact-form h2 {
@@ -538,6 +551,9 @@ a {
     font-weight: 500;
     margin-bottom: 25px;
     color: #b1c0d2; }
+    @media (max-width: 640px) {
+      .contact .contact-form h2 {
+        margin: 25px 0 20px; } }
     .contact .contact-form h2 span {
       color: #25c35f; }
   .contact .contact-form .context {
