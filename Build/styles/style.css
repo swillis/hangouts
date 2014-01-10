@@ -706,7 +706,8 @@ a {
   position: relative;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1; }
+  z-index: 1;
+  overflow: scroll; }
   .overlay .sign-in-module {
     position: absolute;
     width: 400px;
