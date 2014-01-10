@@ -82,7 +82,7 @@ $('.facebook.login, .register').click(function() {
   $('.overlay.sign-in').removeClass('visible');
 })
 
-$('body').on('click', '.email.login', function() {
+$('.email.login').click(function() {
   $('.sign-up-form').toggleClass('show');
 })
 
