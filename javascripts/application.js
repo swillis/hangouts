@@ -82,7 +82,7 @@ $('.facebook.login, .register').click(function() {
   $('.overlay.sign-in').removeClass('visible');
 })
 
-$('.email.login').click(function() {
+$('body').on('click', '.email.login', function() {
   $('.sign-up-form').toggleClass('show');
 })
 
@@ -227,15 +227,3 @@ $(document).ready(function() {
   });
 
 });
-
-
-// mobile - show description
-
-// $(window).load(function() {
-//   if ( $(window).width() < 640) { 
-//     $('body').delay(3500).queue(function() {$('.description').addClass('visible')});
-//   }
-//   else {
-//     return false;
-//   }
-// })

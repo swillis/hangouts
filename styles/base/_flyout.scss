@@ -28,6 +28,8 @@
       font-size: 16px;
       z-index: 9999;
 
+      @media (max-width: $small-screen) {}
+
       a {
         &:hover {
           color: darken($link-color, 50%);

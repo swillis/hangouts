@@ -147,6 +147,10 @@ a {
   overflow: hidden;
   width: 100%; }
 
+@media (max-width: 640px) {
+  i {
+    display: inline-block !important; } }
+
 .like {
   color: #b1c0d2; }
 
@@ -296,6 +300,7 @@ a {
       font-weight: 500;
       font-size: 16px;
       z-index: 9999; }
+      @media (max-width: 640px) { }
       .flyout .modal .corner-buttons a:hover {
         color: #304154; }
       .flyout .modal .corner-buttons .like-button {

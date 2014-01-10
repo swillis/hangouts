@@ -31,6 +31,12 @@ a {
   width: 100%;
 }
 
+@media (max-width: $small-screen) {
+  i {
+    display: inline-block !important;
+  }
+}
+
 .like {
   color: $link-color;
 }
