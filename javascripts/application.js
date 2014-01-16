@@ -5,54 +5,54 @@
 
 $('.close-nav').hide();
 
-// $('nav').hide();
+$('nav').hide();
 
-// $('.navigation').hide();
+$('.navigation').hide();
 
-// $('.fancy-title').hide();
+$('.fancy-title').hide();
 
 $('.log-out').hide();
 
 
-// // INTRO
+// INTRO
 
-// $(window).load(function() {
-//   $('.fancy-title').fadeIn(500, function() {
-//     $('.fancy-title').fadeOut(1500, function() {
-//       $('nav, .navigation').fadeIn(500, function() {
-//         if ( $(window).width() < 640) { 
-//           $('body').delay(500).queue(function() {$('.description').addClass('visible')});
-//         }
-//         else {
-//           return false;
-//         }
-//       });
-//     });
-//   });
-// })
+$(window).load(function() {
+  $('.fancy-title').fadeIn(500, function() {
+    $('.fancy-title').fadeOut(1500, function() {
+      $('nav, .navigation').fadeIn(500, function() {
+        if ( $(window).width() < 640) { 
+          $('body').delay(500).queue(function() {$('.description').addClass('visible')});
+        }
+        else {
+          return false;
+        }
+      });
+    });
+  });
+})
 
 
-// // CENTER FANCY TITLE
+// CENTER FANCY TITLE
 
-// $(window).load(function() {
-//   var headHeight = $('.fancy-title').height()/2;
-//   var windowHeight = $(window).height();
-//   var halfWay = windowHeight/2;
-//   var navHeight = $('nav').height();
-//   $('.fancy-title').css({
-//     'padding-top': halfWay - headHeight - navHeight
-//   })
-// })
+$(window).load(function() {
+  var headHeight = $('.fancy-title').height()/2;
+  var windowHeight = $(window).height();
+  var halfWay = windowHeight/2;
+  var navHeight = $('nav').height();
+  $('.fancy-title').css({
+    'padding-top': halfWay - headHeight - navHeight
+  })
+})
 
-// $(window).resize(function() {
-//   var headHeight = $('.fancy-title').height()/2;
-//   var windowHeight = $(window).height();
-//   var halfWay = windowHeight/2;
-//   var navHeight = $('nav').height();
-//   $('.fancy-title').css({
-//     'padding-top': halfWay - headHeight - navHeight
-//   })
-// })
+$(window).resize(function() {
+  var headHeight = $('.fancy-title').height()/2;
+  var windowHeight = $(window).height();
+  var halfWay = windowHeight/2;
+  var navHeight = $('nav').height();
+  $('.fancy-title').css({
+    'padding-top': halfWay - headHeight - navHeight
+  })
+})
 
 
 // sign in
