@@ -70,12 +70,17 @@
       padding: 40px 40px 0;
       width: 100%;
 
+      @media (max-width: $small-screen) {
+        padding: 40px 20px 0;
+      }
+
       h1 {
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 10px;
         color: $link-color;
         letter-spacing: 1px;
         text-transform: uppercase;
+        font-weight: 500;
 
         @media (max-width: $small-screen) {
           margin-bottom: 0;

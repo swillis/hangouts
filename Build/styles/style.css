@@ -330,12 +330,16 @@ a {
       display: table;
       padding: 40px 40px 0;
       width: 100%; }
+      @media (max-width: 640px) {
+        .flyout .modal .heading {
+          padding: 40px 20px 0; } }
       .flyout .modal .heading h1 {
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 10px;
         color: #b1c0d2;
         letter-spacing: 1px;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-weight: 500; }
         @media (max-width: 640px) {
           .flyout .modal .heading h1 {
             margin-bottom: 0; } }
@@ -799,7 +803,7 @@ a {
 
 .visible {
   opacity: 1;
-  z-index: 9999; }
+  z-index: 999; }
 
 .feed #grid[data-columns]::before {
   content: '3 .column.size-1of3'; }
