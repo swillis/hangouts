@@ -1,9 +1,10 @@
 .navigation {
   position: absolute;
-  height: 50px;
+  height: 63px;
   z-index: 9999;
   width: 100%;
   top: 0;
+  background: rgba(30,37,45,0.4);
 
     a {
       color: white;
@@ -11,7 +12,6 @@
 
     .logo {
       top: 20px;
-      text-shadow: $shadow;
       position: absolute;
       left: 20px;
       max-width: 70%;
@@ -36,8 +36,9 @@
       }
 
       .platform-title {
-        text-transform: none;
-        font-weight: 500;
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: 1px;
 
         @media (max-width: $small-screen) {
           display: none;
@@ -63,7 +64,6 @@
           letter-spacing: 1px;
           color: white;
           font-weight: 600;
-          text-shadow: $shadow;
 
           &:first-child {
 

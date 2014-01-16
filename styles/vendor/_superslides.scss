@@ -25,6 +25,13 @@
   z-index: 3;
   top: 46%;
   width: 100%;
+  opacity: 0.5;
+  @include transition ( all , 0.3s);
+
+  &:hover {
+    opacity: 1;
+  }
+  
   a {
     position: absolute;
     display: block;

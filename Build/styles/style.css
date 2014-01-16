@@ -77,7 +77,13 @@
   position: absolute;
   z-index: 3;
   top: 46%;
-  width: 100%; }
+  width: 100%;
+  opacity: 0.5;
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  transition: all, 0.3s; }
+  .slides-navigation:hover {
+    opacity: 1; }
   .slides-navigation a {
     position: absolute;
     display: block; }
@@ -193,15 +199,15 @@ a {
 
 .navigation {
   position: absolute;
-  height: 50px;
+  height: 63px;
   z-index: 9999;
   width: 100%;
-  top: 0; }
+  top: 0;
+  background: rgba(30, 37, 45, 0.4); }
   .navigation a {
     color: white; }
   .navigation .logo {
     top: 20px;
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 20px;
     max-width: 70%; }
@@ -220,8 +226,9 @@ a {
           font-size: 16px;
           width: 50%; } }
     .navigation .logo .platform-title {
-      text-transform: none;
-      font-weight: 500; }
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 1px; }
       @media (max-width: 640px) {
         .navigation .logo .platform-title {
           display: none; } }
@@ -237,8 +244,7 @@ a {
       text-transform: uppercase;
       letter-spacing: 1px;
       color: white;
-      font-weight: 600;
-      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
+      font-weight: 600; }
       @media (max-width: 640px) {
         .navigation .nav-items ul li:first-child {
           display: none; } }
@@ -290,9 +296,12 @@ a {
     margin: 0 auto;
     background: white;
     max-height: 100%;
-    max-width: 960px;
+    max-width: 80%;
     border-top: 5px solid #25c35f;
     overflow-y: scroll; }
+    @media (max-width: 640px) {
+      .flyout .modal {
+        max-width: 100%; } }
     .flyout .modal .corner-buttons {
       position: absolute;
       top: 10px;
@@ -319,14 +328,14 @@ a {
     .flyout .modal .heading {
       clear: both;
       display: table;
-      padding: 40px 40px;
-      width: 100%;
-      border-bottom: 2px dashed #ededed; }
+      padding: 40px 40px 0;
+      width: 100%; }
       .flyout .modal .heading h1 {
         font-size: 40px;
         margin-bottom: 10px;
         color: #b1c0d2;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        text-transform: uppercase; }
         @media (max-width: 640px) {
           .flyout .modal .heading h1 {
             margin-bottom: 0; } }
@@ -337,7 +346,7 @@ a {
       padding: 30px 40px 40px; }
       @media (max-width: 640px) {
         .flyout .modal .content {
-          padding: 20px; } }
+          padding: 20px 20px 30px; } }
 
 .visible {
   bottom: 0px !important;
@@ -347,78 +356,75 @@ a {
   .visible .modal {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
 
-.description .heading {
-  padding: 40px 40px 50px !important; }
-  .description .heading .profile-image {
-    margin: 0 auto;
-    height: 170px;
-    width: 170px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 5px solid #25c35f; }
-    @media (max-width: 640px) {
-      .description .heading .profile-image {
-        height: 100px;
-        width: 100px;
-        border-width: 3px; } }
-    .description .heading .profile-image img {
-      height: 100%; }
-  .description .heading .venue-address {
-    margin-top: 20px;
-    text-align: center; }
-    .description .heading .venue-address h1 {
-      font-size: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #25c35f;
-      font-weight: 500;
-      margin-bottom: 3px; }
-    .description .heading .venue-address h2 {
-      font-size: 18px; }
-    .description .heading .venue-address h3 {
-      font-size: 18px;
-      color: #b1c0d2;
-      margin-bottom: 35px; }
-    .description .heading .venue-address a {
-      background: #25c35f;
-      color: white;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-weight: 600;
-      font-size: 20px; }
-      .description .heading .venue-address a i {
-        margin-right: 10px; }
-      .description .heading .venue-address a:hover {
-        background: #40db79; }
-    .description .heading .venue-address a.selected {
-      background: #e23e32; }
-.description .venue-details {
-  display: table;
-  clear: both;
-  width: 100%; }
-  .description .venue-details .detail {
-    padding: 15px 0;
-    text-align: center;
-    width: 33.33%;
-    float: left;
-    overflow: hidden;
-    background: #47576a;
+.description .heading .profile-image {
+  margin: 0 auto;
+  height: 170px;
+  width: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #25c35f; }
+  @media (max-width: 640px) {
+    .description .heading .profile-image {
+      height: 100px;
+      width: 100px;
+      border-width: 3px; } }
+  .description .heading .profile-image img {
+    height: 100%; }
+.description .heading .venue-address {
+  margin: 20px 0 15px;
+  text-align: center; }
+  .description .heading .venue-address h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #25c35f;
+    font-weight: 500;
+    margin-bottom: 3px; }
+  .description .heading .venue-address h2 {
+    font-size: 18px; }
+  .description .heading .venue-address h3 {
+    font-size: 18px;
+    color: #b1c0d2;
+    margin-bottom: 35px; }
+  .description .heading .venue-address a {
+    background: #25c35f;
     color: white;
-    -webkit-transition: all, 0.3s;
-    -moz-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    @media (max-width: 640px) {
-      .description .venue-details .detail {
-        width: 100%;
-        border-bottom: 2px solid white; } }
-    .description .venue-details .detail:hover {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 20px; }
+    .description .heading .venue-address a i {
+      margin-right: 10px; }
+    .description .heading .venue-address a:hover {
+      background: #40db79; }
+  .description .heading .venue-address a.selected {
+    background: #e23e32; }
+.description .content div {
+  text-align: center;
+  padding: 1em 0 0; }
+  .description .content div .read-more-button {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    color: white;
+    background: #b1c0d2;
+    padding: 5px 10px;
+    border-radius: 3px; }
+    .description .content div .read-more-button:hover {
+      background: #91a6bf; }
+.description .venue-details {
+  text-align: center; }
+  .description .venue-details a {
+    background: #47576a;
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border-top: 5px solid #25c35f; }
+    .description .venue-details a:hover {
       background: #5b7089; }
-    .description .venue-details .detail i {
-      font-size: 50px; }
-    .description .venue-details .detail p {
-      padding-top: 5px;
-      font-weight: 500;
-      font-size: 18px; }
 .description .map {
   position: relative;
   width: 100%;
@@ -476,7 +482,7 @@ a {
 .gallery #exhibition {
   margin: 0 auto; }
   .gallery #exhibition .item {
-    max-width: 285px;
+    max-width: 295px;
     margin-bottom: 5px;
     background: #1e252d;
     overflow: hidden; }
@@ -572,7 +578,8 @@ a {
       border: 2px solid #b1c0d2;
       border-radius: 3px;
       padding: 5px 10px;
-      margin-right: 1%; }
+      margin-right: 1%;
+      font-size: 18px; }
       .contact .contact-form .context .option:nth-child(3) {
         margin-right: 0; }
       .contact .contact-form .context .option i, .contact .contact-form .context .option p {
@@ -589,13 +596,21 @@ a {
           display: none; }
         .contact .contact-form .context .option i {
           margin: 0; } }
-    .contact .contact-form .context .selected {
+    .contact .contact-form .context .selected.praise {
       border-color: #25c35f;
       background: #25c35f !important;
       color: white; }
+    .contact .contact-form .context .selected.problem {
+      border-color: #e23e32;
+      background: #e23e32 !important;
+      color: white; }
+    .contact .contact-form .context .selected.question {
+      border-color: #1e252d;
+      background: #1e252d !important;
+      color: white; }
   .contact .contact-form input, .contact .contact-form textarea, .contact .contact-form button {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     -webkit-appearance: none;
     border: none;
     border-radius: 3px;
@@ -606,10 +621,8 @@ a {
     width: 100%;
     max-width: 600px;
     margin: 5px auto; }
-  .contact .contact-form textarea {
+  .contact .contact-form textarea:focus {
     border-color: #25c35f; }
-    .contact .contact-form textarea:focus {
-      box-shadow: none; }
   .contact .contact-form button[type=submit] {
     color: white;
     padding: 10px;
@@ -637,17 +650,17 @@ a {
 
 .news #newsfeed {
   max-width: 103.125%;
-  margin-left: 6px; }
+  margin: 0 auto; }
   .news #newsfeed .item {
-    max-width: 285px;
+    max-width: 295px;
     min-width: 250px;
     margin: 0 auto;
     float: left;
     margin: 0 auto 5px;
-    border-radius: 3px; }
+    background: #1e252d; }
     @media (max-width: 640px) {
       .news #newsfeed .item {
-        max-width: 270px; } }
+        max-width: 280px; } }
     .news #newsfeed .item .head {
       position: relative;
       font-weight: 500;
@@ -668,8 +681,9 @@ a {
     .news #newsfeed .item .copy {
       padding: 20px;
       font-weight: 500;
-      background: rgba(255, 255, 255, 0.2);
-      font-size: 16px; }
+      background: #323e4c;
+      font-size: 18px;
+      color: #b1c0d2; }
     .news #newsfeed .item .timestamp {
       padding: 10px;
       font-weight: 700;
@@ -681,25 +695,21 @@ a {
         display: inline; }
       .news #newsfeed .item .timestamp i {
         vertical-align: sub; }
-  .news #newsfeed .facebook {
-    background: #3b5998; }
-  .news #newsfeed .gplus {
-    background: #dd4b39; }
-  .news #newsfeed .twitter {
-    background: #9ae4e8; }
-  .news #newsfeed .instagram {
-    background: #29323c; }
-    .news #newsfeed .instagram .copy {
-      color: white; }
-  .news #newsfeed .youtube {
-    background: #e52d27; }
-  .news #newsfeed .plain {
-    background: #25c35f; }
+  .news #newsfeed .facebook .head i {
+    color: #3b5998; }
+  .news #newsfeed .gplus .head i {
+    color: #dd4b39; }
+  .news #newsfeed .twitter .head i {
+    color: #9ae4e8; }
+  .news #newsfeed .youtube .head i {
+    color: #e52d27; }
+  .news #newsfeed .plain .head i {
+    color: #25c35f; }
   .news #newsfeed .large {
-    max-width: 575px; }
+    max-width: 595px; }
     @media (max-width: 640px) {
       .news #newsfeed .large {
-        max-width: 270px; } }
+        max-width: 280px; } }
 
 .overlay {
   opacity: 0;

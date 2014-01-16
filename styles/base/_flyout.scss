@@ -15,10 +15,13 @@
     margin: 0 auto;
     background: white;
     max-height: 100%;
-
-    max-width: 960px;
+    max-width: 80%;
     border-top: 5px solid $brand-color;
     overflow-y: scroll;
+
+    @media (max-width: $small-screen) {
+      max-width: 100%;
+    }
 
     .corner-buttons {
       position: absolute;
@@ -64,15 +67,15 @@
     .heading {
       clear: both;
       display: table;
-      padding: 40px 40px;
+      padding: 40px 40px 0;
       width: 100%;
-      border-bottom: 2px dashed #ededed;
 
       h1 {
         font-size: 40px;
         margin-bottom: 10px;
         color: $link-color;
         letter-spacing: 1px;
+        text-transform: uppercase;
 
         @media (max-width: $small-screen) {
           margin-bottom: 0;
@@ -91,7 +94,7 @@
       padding: 30px 40px 40px;
 
       @media (max-width: $small-screen) {
-        padding: 20px;
+        padding: 20px 20px 30px;
       }
     }
   }
@@ -109,7 +112,6 @@
 .description {
 
   .heading {
-    padding: 40px 40px 50px !important;
 
     .profile-image {
       margin: 0 auto;
@@ -131,7 +133,7 @@
     }
 
     .venue-address {
-      margin-top: 20px;
+      margin: 20px 0 15px;
       text-align: center;
 
       h1 {
@@ -176,38 +178,43 @@
     }
   }
 
-  .venue-details {
-    display: table;
-    clear: both;
-    width: 100%;
+  .content {
 
-    .detail {
-      padding: 15px 0;
+    div {
       text-align: center;
-      width: 33.33%;
-      float: left;
-      overflow: hidden;
-      background: lighten($base-color, 20%);
-      color: #fff;
-      @include transition(all,0.3s);
+      padding: 1em 0 0;
 
-      @media (max-width: $small-screen) {
-        width: 100%;
-        border-bottom: 2px solid #fff;
+      .read-more-button {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 900;
+        color: white;
+        background: $link-color;
+        padding: 5px 10px;
+        border-radius: 3px;
+
+        &:hover {
+          background: darken($link-color, 10%);
+        }
       }
-
-    &:hover {
-      background: lighten($base-color, 30%);
     }
+  }
 
-      i {
-        font-size: 50px;
-      }
+  .venue-details {
+    text-align: center;
 
-      p {
-        padding-top: 5px;
-        font-weight: 500;
-        font-size: 18px;
+    a {
+      background: lighten($base-color, 20%);
+      display: block;
+      padding: 20px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 500;
+      border-top: 5px solid $brand-color;
+
+      &:hover {
+        background: lighten($base-color, 30%);
       }
     }
   }
@@ -308,7 +315,7 @@
     margin: 0 auto;
 
     .item {
-      max-width: 285px;
+      max-width: 295px;
       margin-bottom: 5px;
       background: $base-color;
       overflow: hidden;
@@ -462,6 +469,7 @@
         border-radius: 3px;
         padding: 5px 10px;
         margin-right: 1%;
+        font-size: 18px;
 
         &:nth-child(3) {
           margin-right: 0;
@@ -499,9 +507,21 @@
         }
       }
 
-      .selected {
+      .selected.praise {
         border-color: $brand-color;
         background: $brand-color !important;
+        color: white;
+      }
+
+      .selected.problem {
+        border-color: #e23e32;
+        background: #e23e32 !important;
+        color: white;
+      }
+
+      .selected.question {
+        border-color: $base-color;
+        background: $base-color !important;
         color: white;
       }
     }
@@ -510,7 +530,7 @@
     textarea,
     button {
       display: block;
-      font-size: 16px;
+      font-size: 18px;
       -webkit-appearance: none;
       border: none;
       border-radius: 3px;
@@ -531,10 +551,9 @@
     }
 
     textarea {
-      border-color: $brand-color;
 
       &:focus {
-        box-shadow: none;
+        border-color: $brand-color;
       }
     }
 
@@ -579,18 +598,18 @@
 
   #newsfeed {
     max-width: 103.125%;
-    margin-left: 6px;
+    margin: 0 auto;
 
     .item {
-      max-width: 285px;
+      max-width: 295px;
       min-width: 250px;
       margin: 0 auto;
       float: left;
       margin: 0 auto 5px;
-      border-radius: 3px;
+      background: #1e252d;
 
       @media (max-width: $small-screen) {
-        max-width: 270px;
+        max-width: 280px;
       }
 
       .head {
@@ -627,8 +646,9 @@
       .copy {
         padding: 20px;
         font-weight: 500;
-        background: rgba(255,255,255,0.2);
-        font-size: 16px;
+        background: lighten(#1e252d, 10%);
+        font-size: 18px;
+        color: $link-color;
       }
 
       .timestamp {
@@ -650,38 +670,40 @@
     }
 
     .facebook {
-      background: #3b5998;
+      .head i {
+        color: #3b5998;
+      }
     }
 
     .gplus {
-      background: #dd4b39;
+      .head i {
+        color: #dd4b39;
+      }
     }
 
     .twitter {
-      background: #9AE4E8;
-    }
-
-    .instagram {
-      background: #29323c;
-
-      .copy {
-        color: #fff;
+      .head i {
+        color: #9AE4E8;
       }
     }
 
     .youtube {
-      background: #e52d27;
+      .head i {
+        color: #e52d27;
+      }
     }
 
     .plain {
-      background: $brand-color;
+      .head i {
+        color: $brand-color;
+      }
     }
 
     .large {
-      max-width: 575px;
+      max-width: 595px;
 
       @media (max-width: $small-screen) {
-        max-width: 270px;
+        max-width: 280px;
       }
     }
   }
