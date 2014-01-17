@@ -204,6 +204,10 @@ a {
   width: 100%;
   top: 0;
   background: rgba(30, 37, 45, 0.4); }
+  @media (max-width: 640px) {
+    .navigation {
+      background: none;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); } }
   .navigation a {
     color: white; }
   .navigation .logo {

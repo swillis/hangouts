@@ -6,6 +6,11 @@
   top: 0;
   background: rgba(30,37,45,0.4);
 
+  @media (max-width: $small-screen) {
+    background: none;
+    text-shadow: $shadow;
+  }
+
     a {
       color: white;
     }
